@@ -9,6 +9,10 @@
 #include <QMouseEvent>
 #include <QtDebug>
 
+#include <QtSql/QSqlDatabase>
+#include <QMessageBox>
+#include <QSqlError>
+
 
 Widget::Widget(QWidget *parent)
     : QWidget(parent)
@@ -30,12 +34,14 @@ Widget::Widget(QWidget *parent)
     bottomFrameStyle.open(QFile::ReadOnly);
     ui->bottomframe->setStyleSheet(bottomFrameStyle.readAll());
     bottomFrameStyle.close();
+    ConnectDatabase();
 
 
 }
 
-/**
- * 鼠标拖动窗口事件
+/****************************************
+ * 鼠标拖动窗口事件开始
+ * **************************************
  */
 void Widget::mousePressEvent(QMouseEvent *event)
 {
@@ -65,6 +71,37 @@ void Widget::mouseReleaseEvent(QMouseEvent *event)
     mousePress=false;
 
 }
+/*****************鼠标拖动事件end************************
+ * ****************************************************/
+
+/******************连接数据库***************************
+ **************************************************/
+
+void Widget::ConnectDatabase()
+{
+        QSqlDatabase db = QSqlDatabase::addDatabase("QMYSQL");
+        db.setHostName("127.0.0.1");
+        db.setPort(3306);
+        db.setDatabaseName("qq");
+        db.setUserName("root");
+        db.setPassword("1234");
+        bool ok = db.open();
+        if (ok){
+//            QMessageBox::information(this, "infor", "success");
+             qDebug() <<"数据库连接成功";
+        }
+        else {
+            QMessageBox::information(this, "infor", "open failed");
+            qDebug() << db.lastError().text();
+        }
+}
+
+void Widget::queryUser()
+{
+
+
+}
+
 
 Widget::~Widget()
 {

@@ -20,6 +20,11 @@ private:
     QPoint m_mousePoin;
     QPoint movePoint;
     bool mousePress;
+
+    void ConnectDatabase();
+    void queryUser();
+
+
 protected:
     void mouseMoveEvent(QMouseEvent *event) ;
     void mousePressEvent(QMouseEvent *event) ;
