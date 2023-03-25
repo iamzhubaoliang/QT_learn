@@ -3,8 +3,11 @@
 
 #include <QWidget>
 #include <QSqlDatabase>
+#include "regi"
 QT_BEGIN_NAMESPACE
-namespace Ui { class Widget; }
+namespace Ui {
+class Widget;
+             }
 QT_END_NAMESPACE
 
 class Widget : public QWidget
@@ -17,6 +20,9 @@ public:
 
 private:
     Ui::Widget *ui;
+
+
+
     QPoint m_mousePoin;
     QPoint movePoint;
     bool mousePress;

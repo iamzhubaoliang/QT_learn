@@ -123,6 +123,8 @@ void Widget::on_login_clicked()
     if(res==1)
     {
         QMessageBox::information(this,"提示","成功登录");
+
+
     }else if(res==0){
         QMessageBox::warning(this,"提示","登录失败");
     }else if (res==-1)

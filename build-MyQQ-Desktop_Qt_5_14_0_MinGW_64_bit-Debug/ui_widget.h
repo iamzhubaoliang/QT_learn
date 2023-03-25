@@ -32,6 +32,7 @@ public:
     QLineEdit *username;
     QLineEdit *password;
     QPushButton *login;
+    QLabel *registerBtn;
 
     void setupUi(QWidget *Widget)
     {
@@ -75,6 +76,9 @@ public:
         login = new QPushButton(bottomframe);
         login->setObjectName(QString::fromUtf8("login"));
         login->setGeometry(QRect(140, 110, 271, 31));
+        registerBtn = new QLabel(bottomframe);
+        registerBtn->setObjectName(QString::fromUtf8("registerBtn"));
+        registerBtn->setGeometry(QRect(10, 160, 54, 12));
 
         retranslateUi(Widget);
         QObject::connect(close, SIGNAL(clicked()), Widget, SLOT(close()));
@@ -92,6 +96,7 @@ public:
         username->setPlaceholderText(QCoreApplication::translate("Widget", "\350\276\223\345\205\245ID", nullptr));
         password->setPlaceholderText(QCoreApplication::translate("Widget", "\350\276\223\345\205\245\345\257\206\347\240\201", nullptr));
         login->setText(QCoreApplication::translate("Widget", "\347\231\273\345\275\225", nullptr));
+        registerBtn->setText(QCoreApplication::translate("Widget", "\346\263\250\345\206\214\350\264\246\345\217\267", nullptr));
     } // retranslateUi
 
 };
