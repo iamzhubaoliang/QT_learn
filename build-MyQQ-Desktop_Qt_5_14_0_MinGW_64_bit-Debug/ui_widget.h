@@ -40,8 +40,7 @@ public:
         Widget->resize(543, 362);
         topframe = new QFrame(Widget);
         topframe->setObjectName(QString::fromUtf8("topframe"));
-        topframe->setGeometry(QRect(0, 0, Widget->width(), (Widget->height()/3)));
-//        topframe->setGeometry(QRect(-10, 0, 561, 181));
+        topframe->setGeometry(QRect(-10, 0, 561, 181));
         topframe->setStyleSheet(QString::fromUtf8(""));
         topframe->setFrameShape(QFrame::StyledPanel);
         topframe->setFrameShadow(QFrame::Raised);
@@ -68,9 +67,11 @@ public:
         username = new QLineEdit(bottomframe);
         username->setObjectName(QString::fromUtf8("username"));
         username->setGeometry(QRect(140, 30, 251, 31));
+        username->setEchoMode(QLineEdit::Normal);
         password = new QLineEdit(bottomframe);
         password->setObjectName(QString::fromUtf8("password"));
         password->setGeometry(QRect(140, 70, 271, 31));
+        password->setEchoMode(QLineEdit::Password);
         login = new QPushButton(bottomframe);
         login->setObjectName(QString::fromUtf8("login"));
         login->setGeometry(QRect(140, 110, 271, 31));
@@ -88,6 +89,8 @@ public:
         avatar->setText(QCoreApplication::translate("Widget", "TextLabel", nullptr));
         minsize->setText(QCoreApplication::translate("Widget", "\346\234\200\345\260\217\345\214\226", nullptr));
         close->setText(QCoreApplication::translate("Widget", "\345\205\263\351\227\255", nullptr));
+        username->setPlaceholderText(QCoreApplication::translate("Widget", "\350\276\223\345\205\245ID", nullptr));
+        password->setPlaceholderText(QCoreApplication::translate("Widget", "\350\276\223\345\205\245\345\257\206\347\240\201", nullptr));
         login->setText(QCoreApplication::translate("Widget", "\347\231\273\345\275\225", nullptr));
     } // retranslateUi
 

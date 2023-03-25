@@ -2,7 +2,7 @@
 #define WIDGET_H
 
 #include <QWidget>
-
+#include <QSqlDatabase>
 QT_BEGIN_NAMESPACE
 namespace Ui { class Widget; }
 QT_END_NAMESPACE
@@ -20,9 +20,10 @@ private:
     QPoint m_mousePoin;
     QPoint movePoint;
     bool mousePress;
+    QSqlDatabase db;
 
     void ConnectDatabase();
-    void queryUser();
+    int userLogin();
 
 
 protected:
@@ -30,5 +31,7 @@ protected:
     void mousePressEvent(QMouseEvent *event) ;
     void mouseReleaseEvent(QMouseEvent *event) ;
 
+private slots:
+    void on_login_clicked();
 };
 #endif // WIDGET_H

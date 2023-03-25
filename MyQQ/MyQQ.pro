@@ -23,6 +23,7 @@ HEADERS += \
     widget.h
 
 FORMS += \
+    register.ui \
     widget.ui
 
 # Default rules for deployment.

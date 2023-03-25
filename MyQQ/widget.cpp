@@ -12,6 +12,7 @@
 #include <QtSql/QSqlDatabase>
 #include <QMessageBox>
 #include <QSqlError>
+#include <QSqlQuery>
 
 
 Widget::Widget(QWidget *parent)
@@ -37,6 +38,11 @@ Widget::Widget(QWidget *parent)
     ConnectDatabase();
 
 
+
+
+    ui->username->setValidator(new QRegExpValidator(QRegExp("[0-9]+$")));
+
+
 }
 
 /****************************************
@@ -50,7 +56,7 @@ void Widget::mousePressEvent(QMouseEvent *event)
         mousePress=true;
     }
     movePoint=event->globalPos()-pos();
-    qDebug()<<"移动";
+//    qDebug()<<"移动";
 
 }
 
@@ -79,7 +85,7 @@ void Widget::mouseReleaseEvent(QMouseEvent *event)
 
 void Widget::ConnectDatabase()
 {
-        QSqlDatabase db = QSqlDatabase::addDatabase("QMYSQL");
+        db = QSqlDatabase::addDatabase("QMYSQL");
         db.setHostName("127.0.0.1");
         db.setPort(3306);
         db.setDatabaseName("qq");
@@ -96,15 +102,43 @@ void Widget::ConnectDatabase()
         }
 }
 
-void Widget::queryUser()
+/**
+ * 这里的数据库全部使用prepare来防止sql注入
+ */
+int Widget::userLogin()
 {
-
+    QSqlQuery query;
+    query.prepare("select qqid,qqpassword from appuser where qqid=:qqid and qqpassword=:qqpassword ");
+    query.bindValue(":qqid",ui->username->text());
+    query.bindValue(":qqpassword",ui->password->text());
+    query.exec();
+    return query.size();
 
 }
+
+
+void Widget::on_login_clicked()
+{
+    int res=userLogin();
+    if(res==1)
+    {
+        QMessageBox::information(this,"提示","成功登录");
+    }else if(res==0){
+        QMessageBox::warning(this,"提示","登录失败");
+    }else if (res==-1)
+    {
+
+        QMessageBox::warning(this,"提示","数据库拒绝提供信息");
+    }
+
+}
+
 
 
 Widget::~Widget()
 {
     delete ui;
 }
+
+
 
