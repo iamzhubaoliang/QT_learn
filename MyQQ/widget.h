@@ -3,7 +3,7 @@
 
 #include <QWidget>
 #include <QSqlDatabase>
-#include "regi"
+//#include "regi"
 QT_BEGIN_NAMESPACE
 namespace Ui {
 class Widget;
