@@ -16,7 +16,7 @@ CC            = gcc
 CXX           = g++
 DEFINES       = -DUNICODE -D_UNICODE -DWIN32 -DMINGW_HAS_SECURE_API=1 -DManipulateFile_LIBRARY -DQT_QML_DEBUG -DQT_GUI_LIB -DQT_CORE_LIB
 CFLAGS        = -fno-keep-inline-dllexport -g -Wall -Wextra -Wextra $(DEFINES)
-CXXFLAGS      = -fno-keep-inline-dllexport -g -Wall -Wextra -Wextra -fexceptions -mthreads $(DEFINES)
+CXXFLAGS      = -fno-keep-inline-dllexport -g -std=gnu++11 -Wall -Wextra -Wextra -fexceptions -mthreads $(DEFINES)
 INCPATH       = -I..\..\MyQQ_version\ManipulateFile -I. -ID:\solft\qt\5.14.0\mingw73_64\include -ID:\solft\qt\5.14.0\mingw73_64\include\QtGui -ID:\solft\qt\5.14.0\mingw73_64\include\QtANGLE -ID:\solft\qt\5.14.0\mingw73_64\include\QtCore -I. -I/include -ID:\solft\qt\5.14.0\mingw73_64\mkspecs\win32-g++ 
 LINKER      =        g++
 LFLAGS        =        -shared -Wl,-subsystem,windows -mthreads -Wl,--out-implib,libManipulateFile.a
@@ -506,7 +506,7 @@ compiler_moc_predefs_make_all: moc_predefs.h
 compiler_moc_predefs_clean:
 	-$(DEL_FILE) moc_predefs.h
 moc_predefs.h: D:/solft/qt/5.14.0/mingw73_64/mkspecs/features/data/dummy.cpp
-	g++ -fno-keep-inline-dllexport -g -Wall -Wextra -Wextra -dM -E -o moc_predefs.h D:\solft\qt\5.14.0\mingw73_64\mkspecs\features\data\dummy.cpp
+	g++ -fno-keep-inline-dllexport -g -std=gnu++11 -Wall -Wextra -Wextra -dM -E -o moc_predefs.h D:\solft\qt\5.14.0\mingw73_64\mkspecs\features\data\dummy.cpp
 
 compiler_moc_header_make_all:
 compiler_moc_header_clean:

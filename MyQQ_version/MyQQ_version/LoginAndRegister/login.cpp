@@ -16,7 +16,7 @@
 #include <QSqlQuery>
 #include <QCompleter>
 #include <fstream>
-//#include "ManipulateFile/mani_file.h"
+#include "mani_file.h"
 #include <string>
 
 
@@ -165,9 +165,11 @@ void Login::on_pushButton_clicked()
  */
 void Login::createUsernameFile()
 {
-//   std::string fileName="MyTests.txt";
-//   mani_file*  mani=new mani_file();
-//   mani->createFile(fileName);
+
+//   std::printf("aaa");
+
+   mani_file*  mani=new mani_file();
+   mani->createFile("xxxxx.txt");
 
 }
 

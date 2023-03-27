@@ -4,11 +4,15 @@
 #include <string>
 
 
-class  mani_file
+class   mani_file
 {
+
+
 public:
       mani_file();
+      ~mani_file();
       bool createFile(std::string fileName);
+
 //    bool openFile(std::string fileName);
 //    bool writeFileLine(std::string content);
 };

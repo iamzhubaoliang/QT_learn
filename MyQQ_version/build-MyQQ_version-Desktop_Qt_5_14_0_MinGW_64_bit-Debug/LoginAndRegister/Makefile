@@ -17,10 +17,10 @@ CXX           = g++
 DEFINES       = -DUNICODE -D_UNICODE -DWIN32 -DMINGW_HAS_SECURE_API=1 -DQT_DEPRECATED_WARNINGS -DQT_QML_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_SQL_LIB -DQT_CORE_LIB -DQT_NEEDS_QMAIN
 CFLAGS        = -fno-keep-inline-dllexport -g -Wall -Wextra -Wextra $(DEFINES)
 CXXFLAGS      = -fno-keep-inline-dllexport -g -std=gnu++11 -Wall -Wextra -Wextra -fexceptions -mthreads $(DEFINES)
-INCPATH       = -I..\..\MyQQ_version\LoginAndRegister -I. -ID:\solft\qt\5.14.0\mingw73_64\include -ID:\solft\qt\5.14.0\mingw73_64\include\QtWidgets -ID:\solft\qt\5.14.0\mingw73_64\include\QtGui -ID:\solft\qt\5.14.0\mingw73_64\include\QtANGLE -ID:\solft\qt\5.14.0\mingw73_64\include\QtSql -ID:\solft\qt\5.14.0\mingw73_64\include\QtCore -I. -I. -I/include -ID:\solft\qt\5.14.0\mingw73_64\mkspecs\win32-g++ 
+INCPATH       = -I..\..\MyQQ_version\LoginAndRegister -I. -I..\..\MyQQ_version\ManipulateFile -ID:\solft\qt\5.14.0\mingw73_64\include -ID:\solft\qt\5.14.0\mingw73_64\include\QtWidgets -ID:\solft\qt\5.14.0\mingw73_64\include\QtGui -ID:\solft\qt\5.14.0\mingw73_64\include\QtANGLE -ID:\solft\qt\5.14.0\mingw73_64\include\QtSql -ID:\solft\qt\5.14.0\mingw73_64\include\QtCore -I. -I. -I/include -ID:\solft\qt\5.14.0\mingw73_64\mkspecs\win32-g++ 
 LINKER      =        g++
 LFLAGS        =        -Wl,-subsystem,windows -mthreads
-LIBS        =        D:\solft\qt\5.14.0\mingw73_64\lib\libQt5Widgets.a D:\solft\qt\5.14.0\mingw73_64\lib\libQt5Gui.a D:\solft\qt\5.14.0\mingw73_64\lib\libQt5Sql.a D:\solft\qt\5.14.0\mingw73_64\lib\libQt5Core.a LoginAndRegister_resource_res.o  -lmingw32 D:\solft\qt\5.14.0\mingw73_64\lib\libqtmain.a -LC:\openssl\lib -LC:\Utils\my_sql\mysql-5.7.25-winx64\lib -LC:\Utils\postgresql\pgsql\lib -lshell32 
+LIBS        =        -LE:\work\Myqq\MyQQ_version\build-MyQQ_version-Desktop_Qt_5_14_0_MinGW_64_bit-Debug\ManipulateFile -lManipulateFile D:\solft\qt\5.14.0\mingw73_64\lib\libQt5Widgets.a D:\solft\qt\5.14.0\mingw73_64\lib\libQt5Gui.a D:\solft\qt\5.14.0\mingw73_64\lib\libQt5Sql.a D:\solft\qt\5.14.0\mingw73_64\lib\libQt5Core.a LoginAndRegister_resource_res.o  -lmingw32 D:\solft\qt\5.14.0\mingw73_64\lib\libqtmain.a -LC:\openssl\lib -LC:\Utils\my_sql\mysql-5.7.25-winx64\lib -LC:\Utils\postgresql\pgsql\lib -lshell32 
 QMAKE         = D:\solft\qt\5.14.0\mingw73_64\bin\qmake.exe
 DEL_FILE      = del
 CHK_DIR_EXISTS= if not exist
@@ -650,7 +650,7 @@ moc_Register.cpp: ../../MyQQ_version/LoginAndRegister/Register.h \
 		D:/solft/qt/5.14.0/mingw73_64/include/QtGui/qtouchdevice.h \
 		moc_predefs.h \
 		D:/solft/qt/5.14.0/mingw73_64/bin/moc.exe
-	D:\solft\qt\5.14.0\mingw73_64\bin\moc.exe $(DEFINES) --include E:/work/Myqq/MyQQ_version/build-MyQQ_version-Desktop_Qt_5_14_0_MinGW_64_bit-Debug/LoginAndRegister/moc_predefs.h -ID:/solft/qt/5.14.0/mingw73_64/mkspecs/win32-g++ -IE:/work/Myqq/MyQQ_version/MyQQ_version/LoginAndRegister -ID:/solft/qt/5.14.0/mingw73_64/include -ID:/solft/qt/5.14.0/mingw73_64/include/QtWidgets -ID:/solft/qt/5.14.0/mingw73_64/include/QtGui -ID:/solft/qt/5.14.0/mingw73_64/include/QtANGLE -ID:/solft/qt/5.14.0/mingw73_64/include/QtSql -ID:/solft/qt/5.14.0/mingw73_64/include/QtCore -I. -ID:/solft/qt/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++ -ID:/solft/qt/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/x86_64-w64-mingw32 -ID:/solft/qt/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/backward -ID:/solft/qt/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include -ID:/solft/qt/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include-fixed -ID:/solft/qt/Tools/mingw730_64/x86_64-w64-mingw32/include ..\..\MyQQ_version\LoginAndRegister\Register.h -o moc_Register.cpp
+	D:\solft\qt\5.14.0\mingw73_64\bin\moc.exe $(DEFINES) --include E:/work/Myqq/MyQQ_version/build-MyQQ_version-Desktop_Qt_5_14_0_MinGW_64_bit-Debug/LoginAndRegister/moc_predefs.h -ID:/solft/qt/5.14.0/mingw73_64/mkspecs/win32-g++ -IE:/work/Myqq/MyQQ_version/MyQQ_version/LoginAndRegister -IE:/work/Myqq/MyQQ_version/MyQQ_version/ManipulateFile -ID:/solft/qt/5.14.0/mingw73_64/include -ID:/solft/qt/5.14.0/mingw73_64/include/QtWidgets -ID:/solft/qt/5.14.0/mingw73_64/include/QtGui -ID:/solft/qt/5.14.0/mingw73_64/include/QtANGLE -ID:/solft/qt/5.14.0/mingw73_64/include/QtSql -ID:/solft/qt/5.14.0/mingw73_64/include/QtCore -I. -ID:/solft/qt/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++ -ID:/solft/qt/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/x86_64-w64-mingw32 -ID:/solft/qt/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/backward -ID:/solft/qt/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include -ID:/solft/qt/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include-fixed -ID:/solft/qt/Tools/mingw730_64/x86_64-w64-mingw32/include ..\..\MyQQ_version\LoginAndRegister\Register.h -o moc_Register.cpp
 
 moc_login.cpp: ../../MyQQ_version/LoginAndRegister/login.h \
 		D:/solft/qt/5.14.0/mingw73_64/include/QtWidgets/QWidget \
@@ -763,7 +763,7 @@ moc_login.cpp: ../../MyQQ_version/LoginAndRegister/login.h \
 		D:/solft/qt/5.14.0/mingw73_64/include/QtSql/qtsql-config.h \
 		moc_predefs.h \
 		D:/solft/qt/5.14.0/mingw73_64/bin/moc.exe
-	D:\solft\qt\5.14.0\mingw73_64\bin\moc.exe $(DEFINES) --include E:/work/Myqq/MyQQ_version/build-MyQQ_version-Desktop_Qt_5_14_0_MinGW_64_bit-Debug/LoginAndRegister/moc_predefs.h -ID:/solft/qt/5.14.0/mingw73_64/mkspecs/win32-g++ -IE:/work/Myqq/MyQQ_version/MyQQ_version/LoginAndRegister -ID:/solft/qt/5.14.0/mingw73_64/include -ID:/solft/qt/5.14.0/mingw73_64/include/QtWidgets -ID:/solft/qt/5.14.0/mingw73_64/include/QtGui -ID:/solft/qt/5.14.0/mingw73_64/include/QtANGLE -ID:/solft/qt/5.14.0/mingw73_64/include/QtSql -ID:/solft/qt/5.14.0/mingw73_64/include/QtCore -I. -ID:/solft/qt/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++ -ID:/solft/qt/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/x86_64-w64-mingw32 -ID:/solft/qt/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/backward -ID:/solft/qt/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include -ID:/solft/qt/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include-fixed -ID:/solft/qt/Tools/mingw730_64/x86_64-w64-mingw32/include ..\..\MyQQ_version\LoginAndRegister\login.h -o moc_login.cpp
+	D:\solft\qt\5.14.0\mingw73_64\bin\moc.exe $(DEFINES) --include E:/work/Myqq/MyQQ_version/build-MyQQ_version-Desktop_Qt_5_14_0_MinGW_64_bit-Debug/LoginAndRegister/moc_predefs.h -ID:/solft/qt/5.14.0/mingw73_64/mkspecs/win32-g++ -IE:/work/Myqq/MyQQ_version/MyQQ_version/LoginAndRegister -IE:/work/Myqq/MyQQ_version/MyQQ_version/ManipulateFile -ID:/solft/qt/5.14.0/mingw73_64/include -ID:/solft/qt/5.14.0/mingw73_64/include/QtWidgets -ID:/solft/qt/5.14.0/mingw73_64/include/QtGui -ID:/solft/qt/5.14.0/mingw73_64/include/QtANGLE -ID:/solft/qt/5.14.0/mingw73_64/include/QtSql -ID:/solft/qt/5.14.0/mingw73_64/include/QtCore -I. -ID:/solft/qt/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++ -ID:/solft/qt/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/x86_64-w64-mingw32 -ID:/solft/qt/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/backward -ID:/solft/qt/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include -ID:/solft/qt/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include-fixed -ID:/solft/qt/Tools/mingw730_64/x86_64-w64-mingw32/include ..\..\MyQQ_version\LoginAndRegister\login.h -o moc_login.cpp
 
 compiler_moc_objc_header_make_all:
 compiler_moc_objc_header_clean:
@@ -797,9 +797,11 @@ compiler_clean: compiler_rcc_clean compiler_moc_predefs_clean compiler_moc_heade
 ####### Compile
 
 Register.o: ../../MyQQ_version/LoginAndRegister/Register.cpp ui_regist.h \
-		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/QVariant \
-		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qvariant.h \
-		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qatomic.h \
+		../../MyQQ_version/LoginAndRegister/Register.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtWidgets/QWidget \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtWidgets/qwidget.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtWidgets/qtwidgetsglobal.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtGui/qtguiglobal.h \
 		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qglobal.h \
 		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qconfig-bootstrapped.h \
 		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qconfig.h \
@@ -811,29 +813,37 @@ Register.o: ../../MyQQ_version/LoginAndRegister/Register.cpp ui_regist.h \
 		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qsysinfo.h \
 		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qlogging.h \
 		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qflags.h \
-		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qglobalstatic.h \
-		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qmutex.h \
-		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qnumeric.h \
-		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qversiontagging.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qatomic.h \
 		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qbasicatomic.h \
 		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qatomic_bootstrap.h \
 		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qgenericatomic.h \
 		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qatomic_cxx11.h \
 		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qatomic_msvc.h \
-		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qbytearray.h \
-		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qrefcount.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qglobalstatic.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qmutex.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qnumeric.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qversiontagging.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtGui/qtgui-config.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtWidgets/qtwidgets-config.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtGui/qwindowdefs.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qobjectdefs.h \
 		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qnamespace.h \
-		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qarraydata.h \
-		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qlist.h \
-		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qalgorithms.h \
-		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qiterator.h \
-		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qhashfunctions.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qobjectdefs_impl.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtGui/qwindowdefs_win.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qobject.h \
 		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qstring.h \
 		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qchar.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qbytearray.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qrefcount.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qarraydata.h \
 		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qstringliteral.h \
 		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qstringalgorithms.h \
 		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qstringview.h \
 		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qstringbuilder.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qlist.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qalgorithms.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qiterator.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qhashfunctions.h \
 		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qpair.h \
 		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qvector.h \
 		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qcontainertools_impl.h \
@@ -842,43 +852,16 @@ Register.o: ../../MyQQ_version/LoginAndRegister/Register.cpp ui_regist.h \
 		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qstringlist.h \
 		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qregexp.h \
 		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qstringmatcher.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qcoreevent.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qscopedpointer.h \
 		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qmetatype.h \
 		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qvarlengtharray.h \
 		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qcontainerfwd.h \
-		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qobjectdefs.h \
-		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qobjectdefs_impl.h \
-		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qmap.h \
-		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qdebug.h \
-		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qhash.h \
-		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qtextstream.h \
-		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qiodevice.h \
-		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qobject.h \
-		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qcoreevent.h \
-		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qscopedpointer.h \
 		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qobject_impl.h \
-		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qlocale.h \
-		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qshareddata.h \
-		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qset.h \
-		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qcontiguouscache.h \
-		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qsharedpointer.h \
-		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qsharedpointer_impl.h \
-		D:/solft/qt/5.14.0/mingw73_64/include/QtWidgets/QApplication \
-		D:/solft/qt/5.14.0/mingw73_64/include/QtWidgets/qapplication.h \
-		D:/solft/qt/5.14.0/mingw73_64/include/QtWidgets/qtwidgetsglobal.h \
-		D:/solft/qt/5.14.0/mingw73_64/include/QtGui/qtguiglobal.h \
-		D:/solft/qt/5.14.0/mingw73_64/include/QtGui/qtgui-config.h \
-		D:/solft/qt/5.14.0/mingw73_64/include/QtWidgets/qtwidgets-config.h \
-		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qcoreapplication.h \
-		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qeventloop.h \
-		D:/solft/qt/5.14.0/mingw73_64/include/QtGui/qwindowdefs.h \
-		D:/solft/qt/5.14.0/mingw73_64/include/QtGui/qwindowdefs_win.h \
-		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qsize.h \
 		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qmargins.h \
-		D:/solft/qt/5.14.0/mingw73_64/include/QtGui/qcursor.h \
-		D:/solft/qt/5.14.0/mingw73_64/include/QtWidgets/qdesktopwidget.h \
-		D:/solft/qt/5.14.0/mingw73_64/include/QtWidgets/qwidget.h \
 		D:/solft/qt/5.14.0/mingw73_64/include/QtGui/qpaintdevice.h \
 		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qrect.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qsize.h \
 		D:/solft/qt/5.14.0/mingw73_64/include/QtGui/qpalette.h \
 		D:/solft/qt/5.14.0/mingw73_64/include/QtGui/qcolor.h \
 		D:/solft/qt/5.14.0/mingw73_64/include/QtGui/qrgb.h \
@@ -888,47 +871,37 @@ Register.o: ../../MyQQ_version/LoginAndRegister/Register.cpp ui_regist.h \
 		D:/solft/qt/5.14.0/mingw73_64/include/QtGui/qpolygon.h \
 		D:/solft/qt/5.14.0/mingw73_64/include/QtGui/qregion.h \
 		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qdatastream.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qiodevice.h \
 		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qline.h \
 		D:/solft/qt/5.14.0/mingw73_64/include/QtGui/qtransform.h \
 		D:/solft/qt/5.14.0/mingw73_64/include/QtGui/qpainterpath.h \
 		D:/solft/qt/5.14.0/mingw73_64/include/QtGui/qimage.h \
 		D:/solft/qt/5.14.0/mingw73_64/include/QtGui/qpixelformat.h \
 		D:/solft/qt/5.14.0/mingw73_64/include/QtGui/qpixmap.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qsharedpointer.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qshareddata.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qhash.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qsharedpointer_impl.h \
 		D:/solft/qt/5.14.0/mingw73_64/include/QtGui/qfont.h \
 		D:/solft/qt/5.14.0/mingw73_64/include/QtGui/qfontmetrics.h \
 		D:/solft/qt/5.14.0/mingw73_64/include/QtGui/qfontinfo.h \
 		D:/solft/qt/5.14.0/mingw73_64/include/QtWidgets/qsizepolicy.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtGui/qcursor.h \
 		D:/solft/qt/5.14.0/mingw73_64/include/QtGui/qkeysequence.h \
 		D:/solft/qt/5.14.0/mingw73_64/include/QtGui/qevent.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qvariant.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qmap.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qdebug.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qtextstream.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qlocale.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qset.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qcontiguouscache.h \
 		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qurl.h \
 		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qurlquery.h \
 		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qfile.h \
 		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qfiledevice.h \
 		D:/solft/qt/5.14.0/mingw73_64/include/QtGui/qvector2d.h \
-		D:/solft/qt/5.14.0/mingw73_64/include/QtGui/qtouchdevice.h \
-		D:/solft/qt/5.14.0/mingw73_64/include/QtGui/qguiapplication.h \
-		D:/solft/qt/5.14.0/mingw73_64/include/QtGui/qinputmethod.h \
-		D:/solft/qt/5.14.0/mingw73_64/include/QtWidgets/QPlainTextEdit \
-		D:/solft/qt/5.14.0/mingw73_64/include/QtWidgets/qplaintextedit.h \
-		D:/solft/qt/5.14.0/mingw73_64/include/QtWidgets/qtextedit.h \
-		D:/solft/qt/5.14.0/mingw73_64/include/QtWidgets/qabstractscrollarea.h \
-		D:/solft/qt/5.14.0/mingw73_64/include/QtWidgets/qframe.h \
-		D:/solft/qt/5.14.0/mingw73_64/include/QtGui/qtextdocument.h \
-		D:/solft/qt/5.14.0/mingw73_64/include/QtGui/qtextoption.h \
-		D:/solft/qt/5.14.0/mingw73_64/include/QtGui/qtextcursor.h \
-		D:/solft/qt/5.14.0/mingw73_64/include/QtGui/qtextformat.h \
-		D:/solft/qt/5.14.0/mingw73_64/include/QtGui/qpen.h \
-		D:/solft/qt/5.14.0/mingw73_64/include/QtGui/qabstracttextdocumentlayout.h \
-		D:/solft/qt/5.14.0/mingw73_64/include/QtGui/qtextlayout.h \
-		D:/solft/qt/5.14.0/mingw73_64/include/QtGui/qglyphrun.h \
-		D:/solft/qt/5.14.0/mingw73_64/include/QtGui/qrawfont.h \
-		D:/solft/qt/5.14.0/mingw73_64/include/QtGui/qfontdatabase.h \
-		D:/solft/qt/5.14.0/mingw73_64/include/QtWidgets/QPushButton \
-		D:/solft/qt/5.14.0/mingw73_64/include/QtWidgets/qpushbutton.h \
-		D:/solft/qt/5.14.0/mingw73_64/include/QtWidgets/qabstractbutton.h \
-		D:/solft/qt/5.14.0/mingw73_64/include/QtGui/qicon.h \
-		D:/solft/qt/5.14.0/mingw73_64/include/QtWidgets/QWidget \
-		../../MyQQ_version/LoginAndRegister/Register.h
+		D:/solft/qt/5.14.0/mingw73_64/include/QtGui/qtouchdevice.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o Register.o ..\..\MyQQ_version\LoginAndRegister\Register.cpp
 
 login.o: ../../MyQQ_version/LoginAndRegister/login.cpp ../../MyQQ_version/LoginAndRegister/login.h \
@@ -1041,42 +1014,6 @@ login.o: ../../MyQQ_version/LoginAndRegister/login.cpp ../../MyQQ_version/LoginA
 		D:/solft/qt/5.14.0/mingw73_64/include/QtSql/qtsqlglobal.h \
 		D:/solft/qt/5.14.0/mingw73_64/include/QtSql/qtsql-config.h \
 		ui_login.h \
-		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/QVariant \
-		D:/solft/qt/5.14.0/mingw73_64/include/QtWidgets/QApplication \
-		D:/solft/qt/5.14.0/mingw73_64/include/QtWidgets/qapplication.h \
-		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qcoreapplication.h \
-		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qeventloop.h \
-		D:/solft/qt/5.14.0/mingw73_64/include/QtWidgets/qdesktopwidget.h \
-		D:/solft/qt/5.14.0/mingw73_64/include/QtGui/qguiapplication.h \
-		D:/solft/qt/5.14.0/mingw73_64/include/QtGui/qinputmethod.h \
-		D:/solft/qt/5.14.0/mingw73_64/include/QtWidgets/QComboBox \
-		D:/solft/qt/5.14.0/mingw73_64/include/QtWidgets/qcombobox.h \
-		D:/solft/qt/5.14.0/mingw73_64/include/QtWidgets/qabstractitemdelegate.h \
-		D:/solft/qt/5.14.0/mingw73_64/include/QtWidgets/qstyleoption.h \
-		D:/solft/qt/5.14.0/mingw73_64/include/QtWidgets/qabstractspinbox.h \
-		D:/solft/qt/5.14.0/mingw73_64/include/QtGui/qvalidator.h \
-		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qregularexpression.h \
-		D:/solft/qt/5.14.0/mingw73_64/include/QtGui/qicon.h \
-		D:/solft/qt/5.14.0/mingw73_64/include/QtWidgets/qslider.h \
-		D:/solft/qt/5.14.0/mingw73_64/include/QtWidgets/qabstractslider.h \
-		D:/solft/qt/5.14.0/mingw73_64/include/QtWidgets/qstyle.h \
-		D:/solft/qt/5.14.0/mingw73_64/include/QtWidgets/qtabbar.h \
-		D:/solft/qt/5.14.0/mingw73_64/include/QtWidgets/qtabwidget.h \
-		D:/solft/qt/5.14.0/mingw73_64/include/QtWidgets/qrubberband.h \
-		D:/solft/qt/5.14.0/mingw73_64/include/QtWidgets/qframe.h \
-		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qabstractitemmodel.h \
-		D:/solft/qt/5.14.0/mingw73_64/include/QtWidgets/QFrame \
-		D:/solft/qt/5.14.0/mingw73_64/include/QtWidgets/QLabel \
-		D:/solft/qt/5.14.0/mingw73_64/include/QtWidgets/qlabel.h \
-		D:/solft/qt/5.14.0/mingw73_64/include/QtWidgets/QLineEdit \
-		D:/solft/qt/5.14.0/mingw73_64/include/QtWidgets/qlineedit.h \
-		D:/solft/qt/5.14.0/mingw73_64/include/QtGui/qtextcursor.h \
-		D:/solft/qt/5.14.0/mingw73_64/include/QtGui/qtextformat.h \
-		D:/solft/qt/5.14.0/mingw73_64/include/QtGui/qpen.h \
-		D:/solft/qt/5.14.0/mingw73_64/include/QtGui/qtextoption.h \
-		D:/solft/qt/5.14.0/mingw73_64/include/QtWidgets/QPushButton \
-		D:/solft/qt/5.14.0/mingw73_64/include/QtWidgets/qpushbutton.h \
-		D:/solft/qt/5.14.0/mingw73_64/include/QtWidgets/qabstractbutton.h \
 		../../MyQQ_version/LoginAndRegister/Register.h \
 		D:/solft/qt/5.14.0/mingw73_64/include/QtGui/QPalette \
 		D:/solft/qt/5.14.0/mingw73_64/include/QtWidgets/QStyleFactory \
@@ -1095,7 +1032,9 @@ login.o: ../../MyQQ_version/LoginAndRegister/login.cpp ../../MyQQ_version/LoginA
 		D:/solft/qt/5.14.0/mingw73_64/include/QtSql/QSqlQuery \
 		D:/solft/qt/5.14.0/mingw73_64/include/QtSql/qsqlquery.h \
 		D:/solft/qt/5.14.0/mingw73_64/include/QtWidgets/QCompleter \
-		D:/solft/qt/5.14.0/mingw73_64/include/QtWidgets/qcompleter.h
+		D:/solft/qt/5.14.0/mingw73_64/include/QtWidgets/qcompleter.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qabstractitemmodel.h \
+		../../MyQQ_version/ManipulateFile/mani_file.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o login.o ..\..\MyQQ_version\LoginAndRegister\login.cpp
 
 main.o: ../../MyQQ_version/LoginAndRegister/main.cpp ../../MyQQ_version/LoginAndRegister/login.h \
