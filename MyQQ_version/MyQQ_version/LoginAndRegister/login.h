@@ -33,6 +33,7 @@ private:
 
     void ConnectDatabase();
     int userLogin();
+    void createUsernameFile();
 
 
 protected:

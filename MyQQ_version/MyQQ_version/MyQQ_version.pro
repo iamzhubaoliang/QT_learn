@@ -1,4 +1,8 @@
 TEMPLATE=subdirs
 SUBDIRS+= \
-    LoginAndRegister
+    LoginAndRegister \
+    ManipulateFile
+
+
+
 

@@ -14,6 +14,10 @@
 #include <QMessageBox>
 #include <QSqlError>
 #include <QSqlQuery>
+#include <QCompleter>
+#include <fstream>
+//#include "ManipulateFile/mani_file.h"
+#include <string>
 
 
 Login::Login(QWidget *parent)
@@ -41,8 +45,21 @@ Login::Login(QWidget *parent)
 
 
 
+    ui->minsize->setIcon( QIcon(QApplication::style()->standardIcon(QStyle::SP_TitleBarMinButton)));
+    ui->close->setIcon( QIcon(QApplication::style()->standardIcon(QStyle::SP_TitleBarCloseButton)));
+    ui->username->setValidator(new QRegExpValidator(QRegExp("[0-9]+$")));//设置id框只能输入数字
 
-    ui->username->setValidator(new QRegExpValidator(QRegExp("[0-9]+$")));
+
+
+
+    //自动补全
+    QStringList wordlist;
+    wordlist<<"1"<<"12"<<"113"<<"24";//这里会用本地文件存储
+    QCompleter *completer=new QCompleter(wordlist,this);
+    completer->setCaseSensitivity(Qt::CaseInsensitive);
+    ui->username->setCompleter(completer);
+    createUsernameFile();
+
 
 
 }
@@ -143,7 +160,16 @@ void Login::on_pushButton_clicked()
     uiRegister->setHideWindow(this);
 }
 
+/**
+ * 创建候选框文件
+ */
+void Login::createUsernameFile()
+{
+//   std::string fileName="MyTests.txt";
+//   mani_file*  mani=new mani_file();
+//   mani->createFile(fileName);
 
+}
 
 
 
