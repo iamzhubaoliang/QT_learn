@@ -3,12 +3,14 @@
 
 #include <QWidget>
 #include <QSqlDatabase>
-//#include "regi"
+
 QT_BEGIN_NAMESPACE
 namespace Ui {
 class Widget;
              }
 QT_END_NAMESPACE
+
+class Register;
 
 class Widget : public QWidget
 {
@@ -20,6 +22,7 @@ public:
 
 private:
     Ui::Widget *ui;
+    Register *uiRegister;
 
 
 
@@ -39,5 +42,6 @@ protected:
 
 private slots:
     void on_login_clicked();
+    void on_pushButton_clicked();
 };
 #endif // WIDGET_H

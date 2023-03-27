@@ -1,5 +1,6 @@
 #include "widget.h"
 #include "ui_widget.h"
+#include "Register.h"
 #include <QPalette>
 #include <QStyleFactory>
 #include <QFile>
@@ -123,8 +124,6 @@ void Widget::on_login_clicked()
     if(res==1)
     {
         QMessageBox::information(this,"提示","成功登录");
-
-
     }else if(res==0){
         QMessageBox::warning(this,"提示","登录失败");
     }else if (res==-1)
@@ -136,11 +135,22 @@ void Widget::on_login_clicked()
 }
 
 
+void Widget::on_pushButton_clicked()
+{
+    uiRegister=new Register;
+    uiRegister->show();
+    uiRegister->setHideWindow(this);
+}
+
+
+
+
 
 Widget::~Widget()
 {
     delete ui;
 }
+
 
 
 

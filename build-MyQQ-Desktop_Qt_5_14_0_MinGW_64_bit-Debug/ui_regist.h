@@ -17,39 +17,39 @@
 
 QT_BEGIN_NAMESPACE
 
-class Ui_Form
+class Ui_Register
 {
 public:
     QPlainTextEdit *plainTextEdit;
     QPushButton *pushButton;
 
-    void setupUi(QWidget *Form)
+    void setupUi(QWidget *Register)
     {
-        if (Form->objectName().isEmpty())
-            Form->setObjectName(QString::fromUtf8("Form"));
-        Form->resize(400, 300);
-        plainTextEdit = new QPlainTextEdit(Form);
+        if (Register->objectName().isEmpty())
+            Register->setObjectName(QString::fromUtf8("Register"));
+        Register->resize(400, 300);
+        plainTextEdit = new QPlainTextEdit(Register);
         plainTextEdit->setObjectName(QString::fromUtf8("plainTextEdit"));
         plainTextEdit->setGeometry(QRect(150, 40, 104, 70));
-        pushButton = new QPushButton(Form);
+        pushButton = new QPushButton(Register);
         pushButton->setObjectName(QString::fromUtf8("pushButton"));
         pushButton->setGeometry(QRect(50, 150, 80, 20));
 
-        retranslateUi(Form);
+        retranslateUi(Register);
 
-        QMetaObject::connectSlotsByName(Form);
+        QMetaObject::connectSlotsByName(Register);
     } // setupUi
 
-    void retranslateUi(QWidget *Form)
+    void retranslateUi(QWidget *Register)
     {
-        Form->setWindowTitle(QCoreApplication::translate("Form", "Form", nullptr));
-        pushButton->setText(QCoreApplication::translate("Form", "PushButton", nullptr));
+        Register->setWindowTitle(QCoreApplication::translate("Register", "Form", nullptr));
+        pushButton->setText(QCoreApplication::translate("Register", "PushButton", nullptr));
     } // retranslateUi
 
 };
 
 namespace Ui {
-    class Form: public Ui_Form {};
+    class Register: public Ui_Register {};
 } // namespace Ui
 
 QT_END_NAMESPACE

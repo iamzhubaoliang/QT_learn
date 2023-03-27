@@ -51,15 +51,21 @@ OBJECTS_DIR   = .
 
 ####### Files
 
-SOURCES       = ..\MyQQ\main.cpp \
+SOURCES       = ..\MyQQ\Register.cpp \
+		..\MyQQ\main.cpp \
 		..\MyQQ\widget.cpp qrc_loginResource.cpp \
+		moc_Register.cpp \
 		moc_widget.cpp
-OBJECTS       = main.o \
+OBJECTS       = Register.o \
+		main.o \
 		widget.o \
 		qrc_loginResource.o \
+		moc_Register.o \
 		moc_widget.o
 
-DIST          = login.qss ..\MyQQ\widget.h ..\MyQQ\main.cpp \
+DIST          = login.qss ..\MyQQ\Register.h \
+		..\MyQQ\widget.h ..\MyQQ\Register.cpp \
+		..\MyQQ\main.cpp \
 		..\MyQQ\widget.cpp
 QMAKE_TARGET  = MyQQ
 DESTDIR        =  #avoid trailing-slash linebreak
@@ -498,10 +504,10 @@ qmake: FORCE
 qmake_all: FORCE
 
 dist:
-	$(ZIP) MyQQ.zip $(SOURCES) $(DIST) ..\MyQQ\MyQQ.pro D:\solft\qt\5.14.0\mingw73_64\mkspecs\features\spec_pre.prf D:\solft\qt\5.14.0\mingw73_64\mkspecs\qdevice.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\features\device_config.prf D:\solft\qt\5.14.0\mingw73_64\mkspecs\common\sanitize.conf D:\solft\qt\5.14.0\mingw73_64\mkspecs\common\gcc-base.conf D:\solft\qt\5.14.0\mingw73_64\mkspecs\common\g++-base.conf D:\solft\qt\5.14.0\mingw73_64\mkspecs\common\angle.conf D:\solft\qt\5.14.0\mingw73_64\mkspecs\features\win32\windows_vulkan_sdk.prf D:\solft\qt\5.14.0\mingw73_64\mkspecs\common\windows-vulkan.conf D:\solft\qt\5.14.0\mingw73_64\mkspecs\common\g++-win32.conf D:\solft\qt\5.14.0\mingw73_64\mkspecs\common\windows-desktop.conf D:\solft\qt\5.14.0\mingw73_64\mkspecs\qconfig.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_3danimation.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_3danimation_private.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_3dcore.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_3dcore_private.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_3dextras.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_3dextras_private.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_3dinput.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_3dinput_private.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_3dlogic.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_3dlogic_private.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_3dquick.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_3dquick_private.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_3dquickanimation.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_3dquickanimation_private.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_3dquickextras.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_3dquickextras_private.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_3dquickinput.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_3dquickinput_private.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_3dquickrender.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_3dquickrender_private.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_3dquickscene2d.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_3dquickscene2d_private.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_3drender.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_3drender_private.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_accessibility_support_private.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_axbase.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_axbase_private.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_axcontainer.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_axcontainer_private.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_axserver.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_axserver_private.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_bluetooth.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_bluetooth_private.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_bodymovin_private.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_bootstrap_private.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_charts.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_charts_private.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_concurrent.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_concurrent_private.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_core.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_core_private.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_datavisualization.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_datavisualization_private.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_dbus.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_dbus_private.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_designer.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_designer_private.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_designercomponents_private.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_devicediscovery_support_private.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_edid_support_private.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_egl_support_private.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_eventdispatcher_support_private.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_fb_support_private.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_fontdatabase_support_private.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_gamepad.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_gamepad_private.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_gui.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_gui_private.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_help.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_help_private.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_location.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_location_private.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_multimedia.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_multimedia_private.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_multimediawidgets.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_multimediawidgets_private.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_network.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_network_private.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_networkauth.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_networkauth_private.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_nfc.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_nfc_private.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_opengl.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_opengl_private.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_openglextensions.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_openglextensions_private.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_packetprotocol_private.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_platformcompositor_support_private.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_positioning.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_positioning_private.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_positioningquick.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_positioningquick_private.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_printsupport.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_printsupport_private.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_purchasing.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_purchasing_private.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_qml.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_qml_private.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_qmldebug_private.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_qmldevtools_private.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_qmlmodels.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_qmlmodels_private.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_qmltest.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_qmltest_private.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_qmlworkerscript.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_qmlworkerscript_private.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_qtmultimediaquicktools_private.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_quick.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_quick3d.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_quick3d_private.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_quick3dassetimport.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_quick3dassetimport_private.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_quick3drender.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_quick3drender_private.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_quick3druntimerender.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_quick3druntimerender_private.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_quick3dutils.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_quick3dutils_private.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_quick_private.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_quickcontrols2.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_quickcontrols2_private.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_quickparticles_private.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_quickshapes_private.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_quicktemplates2.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_quicktemplates2_private.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_quickwidgets.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_quickwidgets_private.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_remoteobjects.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_remoteobjects_private.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_repparser.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_repparser_private.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_script.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_script_private.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_scripttools.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_scripttools_private.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_scxml.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_scxml_private.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_sensors.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_sensors_private.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_serialbus.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_serialbus_private.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_serialport.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_serialport_private.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_sql.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_sql_private.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_svg.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_svg_private.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_testlib.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_testlib_private.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_texttospeech.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_texttospeech_private.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_theme_support_private.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_uiplugin.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_uitools.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_uitools_private.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_virtualkeyboard.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_virtualkeyboard_private.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_vulkan_support_private.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_webchannel.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_webchannel_private.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_websockets.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_websockets_private.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_widgets.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_widgets_private.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_windowsuiautomation_support_private.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_winextras.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_winextras_private.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_xml.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_xml_private.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_xmlpatterns.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_xmlpatterns_private.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\features\qt_functions.prf D:\solft\qt\5.14.0\mingw73_64\mkspecs\features\qt_config.prf D:\solft\qt\5.14.0\mingw73_64\mkspecs\win32-g++\qmake.conf D:\solft\qt\5.14.0\mingw73_64\mkspecs\features\spec_post.prf .qmake.stash D:\solft\qt\5.14.0\mingw73_64\mkspecs\features\exclusive_builds.prf D:\solft\qt\5.14.0\mingw73_64\mkspecs\features\toolchain.prf D:\solft\qt\5.14.0\mingw73_64\mkspecs\features\default_pre.prf D:\solft\qt\5.14.0\mingw73_64\mkspecs\features\win32\default_pre.prf D:\solft\qt\5.14.0\mingw73_64\mkspecs\features\resolve_config.prf D:\solft\qt\5.14.0\mingw73_64\mkspecs\features\default_post.prf D:\solft\qt\5.14.0\mingw73_64\mkspecs\features\qml_debug.prf D:\solft\qt\5.14.0\mingw73_64\mkspecs\features\precompile_header.prf D:\solft\qt\5.14.0\mingw73_64\mkspecs\features\warn_on.prf D:\solft\qt\5.14.0\mingw73_64\mkspecs\features\qt.prf D:\solft\qt\5.14.0\mingw73_64\mkspecs\features\resources_functions.prf D:\solft\qt\5.14.0\mingw73_64\mkspecs\features\resources.prf D:\solft\qt\5.14.0\mingw73_64\mkspecs\features\moc.prf D:\solft\qt\5.14.0\mingw73_64\mkspecs\features\win32\opengl.prf D:\solft\qt\5.14.0\mingw73_64\mkspecs\features\uic.prf D:\solft\qt\5.14.0\mingw73_64\mkspecs\features\qmake_use.prf D:\solft\qt\5.14.0\mingw73_64\mkspecs\features\file_copies.prf D:\solft\qt\5.14.0\mingw73_64\mkspecs\features\win32\windows.prf D:\solft\qt\5.14.0\mingw73_64\mkspecs\features\testcase_targets.prf D:\solft\qt\5.14.0\mingw73_64\mkspecs\features\exceptions.prf D:\solft\qt\5.14.0\mingw73_64\mkspecs\features\yacc.prf D:\solft\qt\5.14.0\mingw73_64\mkspecs\features\lex.prf ..\MyQQ\MyQQ.pro ..\MyQQ\loginResource.qrc D:\solft\qt\5.14.0\mingw73_64\lib\Qt5Widgets.prl D:\solft\qt\5.14.0\mingw73_64\lib\Qt5Gui.prl D:\solft\qt\5.14.0\mingw73_64\lib\Qt5Sql.prl D:\solft\qt\5.14.0\mingw73_64\lib\Qt5Core.prl D:\solft\qt\5.14.0\mingw73_64\lib\qtmain.prl   ..\MyQQ\loginResource.qrc D:\solft\qt\5.14.0\mingw73_64\mkspecs\features\data\dummy.cpp ..\MyQQ\widget.h  ..\MyQQ\main.cpp ..\MyQQ\widget.cpp ..\MyQQ\regist.ui ..\MyQQ\widget.ui    
+	$(ZIP) MyQQ.zip $(SOURCES) $(DIST) ..\MyQQ\MyQQ.pro D:\solft\qt\5.14.0\mingw73_64\mkspecs\features\spec_pre.prf D:\solft\qt\5.14.0\mingw73_64\mkspecs\qdevice.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\features\device_config.prf D:\solft\qt\5.14.0\mingw73_64\mkspecs\common\sanitize.conf D:\solft\qt\5.14.0\mingw73_64\mkspecs\common\gcc-base.conf D:\solft\qt\5.14.0\mingw73_64\mkspecs\common\g++-base.conf D:\solft\qt\5.14.0\mingw73_64\mkspecs\common\angle.conf D:\solft\qt\5.14.0\mingw73_64\mkspecs\features\win32\windows_vulkan_sdk.prf D:\solft\qt\5.14.0\mingw73_64\mkspecs\common\windows-vulkan.conf D:\solft\qt\5.14.0\mingw73_64\mkspecs\common\g++-win32.conf D:\solft\qt\5.14.0\mingw73_64\mkspecs\common\windows-desktop.conf D:\solft\qt\5.14.0\mingw73_64\mkspecs\qconfig.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_3danimation.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_3danimation_private.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_3dcore.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_3dcore_private.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_3dextras.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_3dextras_private.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_3dinput.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_3dinput_private.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_3dlogic.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_3dlogic_private.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_3dquick.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_3dquick_private.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_3dquickanimation.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_3dquickanimation_private.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_3dquickextras.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_3dquickextras_private.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_3dquickinput.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_3dquickinput_private.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_3dquickrender.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_3dquickrender_private.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_3dquickscene2d.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_3dquickscene2d_private.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_3drender.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_3drender_private.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_accessibility_support_private.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_axbase.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_axbase_private.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_axcontainer.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_axcontainer_private.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_axserver.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_axserver_private.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_bluetooth.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_bluetooth_private.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_bodymovin_private.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_bootstrap_private.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_charts.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_charts_private.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_concurrent.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_concurrent_private.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_core.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_core_private.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_datavisualization.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_datavisualization_private.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_dbus.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_dbus_private.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_designer.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_designer_private.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_designercomponents_private.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_devicediscovery_support_private.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_edid_support_private.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_egl_support_private.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_eventdispatcher_support_private.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_fb_support_private.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_fontdatabase_support_private.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_gamepad.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_gamepad_private.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_gui.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_gui_private.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_help.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_help_private.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_location.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_location_private.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_multimedia.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_multimedia_private.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_multimediawidgets.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_multimediawidgets_private.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_network.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_network_private.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_networkauth.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_networkauth_private.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_nfc.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_nfc_private.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_opengl.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_opengl_private.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_openglextensions.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_openglextensions_private.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_packetprotocol_private.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_platformcompositor_support_private.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_positioning.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_positioning_private.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_positioningquick.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_positioningquick_private.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_printsupport.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_printsupport_private.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_purchasing.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_purchasing_private.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_qml.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_qml_private.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_qmldebug_private.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_qmldevtools_private.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_qmlmodels.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_qmlmodels_private.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_qmltest.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_qmltest_private.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_qmlworkerscript.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_qmlworkerscript_private.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_qtmultimediaquicktools_private.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_quick.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_quick3d.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_quick3d_private.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_quick3dassetimport.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_quick3dassetimport_private.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_quick3drender.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_quick3drender_private.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_quick3druntimerender.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_quick3druntimerender_private.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_quick3dutils.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_quick3dutils_private.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_quick_private.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_quickcontrols2.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_quickcontrols2_private.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_quickparticles_private.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_quickshapes_private.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_quicktemplates2.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_quicktemplates2_private.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_quickwidgets.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_quickwidgets_private.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_remoteobjects.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_remoteobjects_private.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_repparser.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_repparser_private.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_script.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_script_private.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_scripttools.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_scripttools_private.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_scxml.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_scxml_private.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_sensors.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_sensors_private.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_serialbus.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_serialbus_private.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_serialport.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_serialport_private.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_sql.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_sql_private.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_svg.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_svg_private.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_testlib.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_testlib_private.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_texttospeech.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_texttospeech_private.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_theme_support_private.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_uiplugin.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_uitools.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_uitools_private.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_virtualkeyboard.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_virtualkeyboard_private.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_vulkan_support_private.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_webchannel.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_webchannel_private.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_websockets.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_websockets_private.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_widgets.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_widgets_private.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_windowsuiautomation_support_private.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_winextras.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_winextras_private.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_xml.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_xml_private.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_xmlpatterns.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\modules\qt_lib_xmlpatterns_private.pri D:\solft\qt\5.14.0\mingw73_64\mkspecs\features\qt_functions.prf D:\solft\qt\5.14.0\mingw73_64\mkspecs\features\qt_config.prf D:\solft\qt\5.14.0\mingw73_64\mkspecs\win32-g++\qmake.conf D:\solft\qt\5.14.0\mingw73_64\mkspecs\features\spec_post.prf .qmake.stash D:\solft\qt\5.14.0\mingw73_64\mkspecs\features\exclusive_builds.prf D:\solft\qt\5.14.0\mingw73_64\mkspecs\features\toolchain.prf D:\solft\qt\5.14.0\mingw73_64\mkspecs\features\default_pre.prf D:\solft\qt\5.14.0\mingw73_64\mkspecs\features\win32\default_pre.prf D:\solft\qt\5.14.0\mingw73_64\mkspecs\features\resolve_config.prf D:\solft\qt\5.14.0\mingw73_64\mkspecs\features\default_post.prf D:\solft\qt\5.14.0\mingw73_64\mkspecs\features\qml_debug.prf D:\solft\qt\5.14.0\mingw73_64\mkspecs\features\precompile_header.prf D:\solft\qt\5.14.0\mingw73_64\mkspecs\features\warn_on.prf D:\solft\qt\5.14.0\mingw73_64\mkspecs\features\qt.prf D:\solft\qt\5.14.0\mingw73_64\mkspecs\features\resources_functions.prf D:\solft\qt\5.14.0\mingw73_64\mkspecs\features\resources.prf D:\solft\qt\5.14.0\mingw73_64\mkspecs\features\moc.prf D:\solft\qt\5.14.0\mingw73_64\mkspecs\features\win32\opengl.prf D:\solft\qt\5.14.0\mingw73_64\mkspecs\features\uic.prf D:\solft\qt\5.14.0\mingw73_64\mkspecs\features\qmake_use.prf D:\solft\qt\5.14.0\mingw73_64\mkspecs\features\file_copies.prf D:\solft\qt\5.14.0\mingw73_64\mkspecs\features\win32\windows.prf D:\solft\qt\5.14.0\mingw73_64\mkspecs\features\testcase_targets.prf D:\solft\qt\5.14.0\mingw73_64\mkspecs\features\exceptions.prf D:\solft\qt\5.14.0\mingw73_64\mkspecs\features\yacc.prf D:\solft\qt\5.14.0\mingw73_64\mkspecs\features\lex.prf ..\MyQQ\MyQQ.pro ..\MyQQ\loginResource.qrc D:\solft\qt\5.14.0\mingw73_64\lib\Qt5Widgets.prl D:\solft\qt\5.14.0\mingw73_64\lib\Qt5Gui.prl D:\solft\qt\5.14.0\mingw73_64\lib\Qt5Sql.prl D:\solft\qt\5.14.0\mingw73_64\lib\Qt5Core.prl D:\solft\qt\5.14.0\mingw73_64\lib\qtmain.prl   ..\MyQQ\loginResource.qrc D:\solft\qt\5.14.0\mingw73_64\mkspecs\features\data\dummy.cpp ..\MyQQ\Register.h ..\MyQQ\widget.h  ..\MyQQ\Register.cpp ..\MyQQ\main.cpp ..\MyQQ\widget.cpp ..\MyQQ\regist.ui ..\MyQQ\widget.ui    
 
 clean: compiler_clean 
-	-$(DEL_FILE) main.o widget.o qrc_loginResource.o moc_widget.o
+	-$(DEL_FILE) Register.o main.o widget.o qrc_loginResource.o moc_Register.o moc_widget.o
 	-$(DEL_FILE) MyQQ_resource_res.o
 
 distclean: clean 
@@ -535,9 +541,118 @@ compiler_moc_predefs_clean:
 moc_predefs.h: D:/solft/qt/5.14.0/mingw73_64/mkspecs/features/data/dummy.cpp
 	g++ -fno-keep-inline-dllexport -g -std=gnu++11 -Wall -Wextra -Wextra -dM -E -o moc_predefs.h D:\solft\qt\5.14.0\mingw73_64\mkspecs\features\data\dummy.cpp
 
-compiler_moc_header_make_all: moc_widget.cpp
+compiler_moc_header_make_all: moc_Register.cpp moc_widget.cpp
 compiler_moc_header_clean:
-	-$(DEL_FILE) moc_widget.cpp
+	-$(DEL_FILE) moc_Register.cpp moc_widget.cpp
+moc_Register.cpp: ../MyQQ/Register.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtWidgets/QWidget \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtWidgets/qwidget.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtWidgets/qtwidgetsglobal.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtGui/qtguiglobal.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qglobal.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qconfig-bootstrapped.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qconfig.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qtcore-config.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qsystemdetection.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qprocessordetection.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qcompilerdetection.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qtypeinfo.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qsysinfo.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qlogging.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qflags.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qatomic.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qbasicatomic.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qatomic_bootstrap.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qgenericatomic.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qatomic_cxx11.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qatomic_msvc.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qglobalstatic.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qmutex.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qnumeric.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qversiontagging.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtGui/qtgui-config.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtWidgets/qtwidgets-config.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtGui/qwindowdefs.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qobjectdefs.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qnamespace.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qobjectdefs_impl.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtGui/qwindowdefs_win.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qobject.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qstring.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qchar.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qbytearray.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qrefcount.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qarraydata.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qstringliteral.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qstringalgorithms.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qstringview.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qstringbuilder.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qlist.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qalgorithms.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qiterator.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qhashfunctions.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qpair.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qvector.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qcontainertools_impl.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qpoint.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qbytearraylist.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qstringlist.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qregexp.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qstringmatcher.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qcoreevent.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qscopedpointer.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qmetatype.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qvarlengtharray.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qcontainerfwd.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qobject_impl.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qmargins.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtGui/qpaintdevice.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qrect.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qsize.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtGui/qpalette.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtGui/qcolor.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtGui/qrgb.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtGui/qrgba64.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtGui/qbrush.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtGui/qmatrix.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtGui/qpolygon.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtGui/qregion.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qdatastream.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qiodevice.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qline.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtGui/qtransform.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtGui/qpainterpath.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtGui/qimage.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtGui/qpixelformat.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtGui/qpixmap.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qsharedpointer.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qshareddata.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qhash.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qsharedpointer_impl.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtGui/qfont.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtGui/qfontmetrics.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtGui/qfontinfo.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtWidgets/qsizepolicy.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtGui/qcursor.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtGui/qkeysequence.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtGui/qevent.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qvariant.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qmap.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qdebug.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qtextstream.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qlocale.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qset.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qcontiguouscache.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qurl.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qurlquery.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qfile.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qfiledevice.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtGui/qvector2d.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtGui/qtouchdevice.h \
+		moc_predefs.h \
+		D:/solft/qt/5.14.0/mingw73_64/bin/moc.exe
+	D:\solft\qt\5.14.0\mingw73_64\bin\moc.exe $(DEFINES) --include E:/work/Myqq/build-MyQQ-Desktop_Qt_5_14_0_MinGW_64_bit-Debug/moc_predefs.h -ID:/solft/qt/5.14.0/mingw73_64/mkspecs/win32-g++ -IE:/work/Myqq/MyQQ -ID:/solft/qt/5.14.0/mingw73_64/include -ID:/solft/qt/5.14.0/mingw73_64/include/QtWidgets -ID:/solft/qt/5.14.0/mingw73_64/include/QtGui -ID:/solft/qt/5.14.0/mingw73_64/include/QtANGLE -ID:/solft/qt/5.14.0/mingw73_64/include/QtSql -ID:/solft/qt/5.14.0/mingw73_64/include/QtCore -I. -ID:/solft/qt/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++ -ID:/solft/qt/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/x86_64-w64-mingw32 -ID:/solft/qt/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/backward -ID:/solft/qt/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include -ID:/solft/qt/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include-fixed -ID:/solft/qt/Tools/mingw730_64/x86_64-w64-mingw32/include ..\MyQQ\Register.h -o moc_Register.cpp
+
 moc_widget.cpp: ../MyQQ/widget.h \
 		D:/solft/qt/5.14.0/mingw73_64/include/QtWidgets/QWidget \
 		D:/solft/qt/5.14.0/mingw73_64/include/QtWidgets/qwidget.h \
@@ -677,6 +792,141 @@ compiler_clean: compiler_rcc_clean compiler_moc_predefs_clean compiler_moc_heade
 
 
 ####### Compile
+
+Register.o: ../MyQQ/Register.cpp ui_regist.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/QVariant \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qvariant.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qatomic.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qglobal.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qconfig-bootstrapped.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qconfig.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qtcore-config.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qsystemdetection.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qprocessordetection.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qcompilerdetection.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qtypeinfo.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qsysinfo.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qlogging.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qflags.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qglobalstatic.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qmutex.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qnumeric.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qversiontagging.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qbasicatomic.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qatomic_bootstrap.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qgenericatomic.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qatomic_cxx11.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qatomic_msvc.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qbytearray.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qrefcount.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qnamespace.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qarraydata.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qlist.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qalgorithms.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qiterator.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qhashfunctions.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qstring.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qchar.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qstringliteral.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qstringalgorithms.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qstringview.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qstringbuilder.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qpair.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qvector.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qcontainertools_impl.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qpoint.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qbytearraylist.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qstringlist.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qregexp.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qstringmatcher.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qmetatype.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qvarlengtharray.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qcontainerfwd.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qobjectdefs.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qobjectdefs_impl.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qmap.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qdebug.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qhash.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qtextstream.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qiodevice.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qobject.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qcoreevent.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qscopedpointer.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qobject_impl.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qlocale.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qshareddata.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qset.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qcontiguouscache.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qsharedpointer.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qsharedpointer_impl.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtWidgets/QApplication \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtWidgets/qapplication.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtWidgets/qtwidgetsglobal.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtGui/qtguiglobal.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtGui/qtgui-config.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtWidgets/qtwidgets-config.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qcoreapplication.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qeventloop.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtGui/qwindowdefs.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtGui/qwindowdefs_win.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qsize.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qmargins.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtGui/qcursor.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtWidgets/qdesktopwidget.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtWidgets/qwidget.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtGui/qpaintdevice.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qrect.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtGui/qpalette.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtGui/qcolor.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtGui/qrgb.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtGui/qrgba64.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtGui/qbrush.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtGui/qmatrix.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtGui/qpolygon.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtGui/qregion.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qdatastream.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qline.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtGui/qtransform.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtGui/qpainterpath.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtGui/qimage.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtGui/qpixelformat.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtGui/qpixmap.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtGui/qfont.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtGui/qfontmetrics.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtGui/qfontinfo.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtWidgets/qsizepolicy.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtGui/qkeysequence.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtGui/qevent.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qurl.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qurlquery.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qfile.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qfiledevice.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtGui/qvector2d.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtGui/qtouchdevice.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtGui/qguiapplication.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtGui/qinputmethod.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtWidgets/QPlainTextEdit \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtWidgets/qplaintextedit.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtWidgets/qtextedit.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtWidgets/qabstractscrollarea.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtWidgets/qframe.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtGui/qtextdocument.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtGui/qtextoption.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtGui/qtextcursor.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtGui/qtextformat.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtGui/qpen.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtGui/qabstracttextdocumentlayout.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtGui/qtextlayout.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtGui/qglyphrun.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtGui/qrawfont.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtGui/qfontdatabase.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtWidgets/QPushButton \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtWidgets/qpushbutton.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtWidgets/qabstractbutton.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtGui/qicon.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtWidgets/QWidget \
+		../MyQQ/Register.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o Register.o ..\MyQQ\Register.cpp
 
 main.o: ../MyQQ/main.cpp ../MyQQ/widget.h \
 		D:/solft/qt/5.14.0/mingw73_64/include/QtWidgets/QWidget \
@@ -1028,42 +1278,7 @@ widget.o: ../MyQQ/widget.cpp ../MyQQ/widget.h \
 		D:/solft/qt/5.14.0/mingw73_64/include/QtSql/qtsqlglobal.h \
 		D:/solft/qt/5.14.0/mingw73_64/include/QtSql/qtsql-config.h \
 		ui_widget.h \
-		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/QVariant \
-		D:/solft/qt/5.14.0/mingw73_64/include/QtWidgets/QApplication \
-		D:/solft/qt/5.14.0/mingw73_64/include/QtWidgets/qapplication.h \
-		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qcoreapplication.h \
-		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qeventloop.h \
-		D:/solft/qt/5.14.0/mingw73_64/include/QtWidgets/qdesktopwidget.h \
-		D:/solft/qt/5.14.0/mingw73_64/include/QtGui/qguiapplication.h \
-		D:/solft/qt/5.14.0/mingw73_64/include/QtGui/qinputmethod.h \
-		D:/solft/qt/5.14.0/mingw73_64/include/QtWidgets/QComboBox \
-		D:/solft/qt/5.14.0/mingw73_64/include/QtWidgets/qcombobox.h \
-		D:/solft/qt/5.14.0/mingw73_64/include/QtWidgets/qabstractitemdelegate.h \
-		D:/solft/qt/5.14.0/mingw73_64/include/QtWidgets/qstyleoption.h \
-		D:/solft/qt/5.14.0/mingw73_64/include/QtWidgets/qabstractspinbox.h \
-		D:/solft/qt/5.14.0/mingw73_64/include/QtGui/qvalidator.h \
-		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qregularexpression.h \
-		D:/solft/qt/5.14.0/mingw73_64/include/QtGui/qicon.h \
-		D:/solft/qt/5.14.0/mingw73_64/include/QtWidgets/qslider.h \
-		D:/solft/qt/5.14.0/mingw73_64/include/QtWidgets/qabstractslider.h \
-		D:/solft/qt/5.14.0/mingw73_64/include/QtWidgets/qstyle.h \
-		D:/solft/qt/5.14.0/mingw73_64/include/QtWidgets/qtabbar.h \
-		D:/solft/qt/5.14.0/mingw73_64/include/QtWidgets/qtabwidget.h \
-		D:/solft/qt/5.14.0/mingw73_64/include/QtWidgets/qrubberband.h \
-		D:/solft/qt/5.14.0/mingw73_64/include/QtWidgets/qframe.h \
-		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qabstractitemmodel.h \
-		D:/solft/qt/5.14.0/mingw73_64/include/QtWidgets/QFrame \
-		D:/solft/qt/5.14.0/mingw73_64/include/QtWidgets/QLabel \
-		D:/solft/qt/5.14.0/mingw73_64/include/QtWidgets/qlabel.h \
-		D:/solft/qt/5.14.0/mingw73_64/include/QtWidgets/QLineEdit \
-		D:/solft/qt/5.14.0/mingw73_64/include/QtWidgets/qlineedit.h \
-		D:/solft/qt/5.14.0/mingw73_64/include/QtGui/qtextcursor.h \
-		D:/solft/qt/5.14.0/mingw73_64/include/QtGui/qtextformat.h \
-		D:/solft/qt/5.14.0/mingw73_64/include/QtGui/qpen.h \
-		D:/solft/qt/5.14.0/mingw73_64/include/QtGui/qtextoption.h \
-		D:/solft/qt/5.14.0/mingw73_64/include/QtWidgets/QPushButton \
-		D:/solft/qt/5.14.0/mingw73_64/include/QtWidgets/qpushbutton.h \
-		D:/solft/qt/5.14.0/mingw73_64/include/QtWidgets/qabstractbutton.h \
+		../MyQQ/Register.h \
 		D:/solft/qt/5.14.0/mingw73_64/include/QtGui/QPalette \
 		D:/solft/qt/5.14.0/mingw73_64/include/QtWidgets/QStyleFactory \
 		D:/solft/qt/5.14.0/mingw73_64/include/QtWidgets/qstylefactory.h \
@@ -1084,6 +1299,9 @@ widget.o: ../MyQQ/widget.cpp ../MyQQ/widget.h \
 
 qrc_loginResource.o: qrc_loginResource.cpp 
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o qrc_loginResource.o qrc_loginResource.cpp
+
+moc_Register.o: moc_Register.cpp 
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o moc_Register.o moc_Register.cpp
 
 moc_widget.o: moc_widget.cpp 
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o moc_widget.o moc_widget.cpp
