@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE QtCreatorProject>
-<!-- Written by QtCreator 4.11.0, 2023-03-27T11:26:32. -->
+<!-- Written by QtCreator 4.11.0, 2023-03-27T11:31:55. -->
 <qtcreator>
  <data>
   <variable>EnvironmentId</variable>
@@ -531,7 +531,7 @@
     </valuelist>
     <value type="int" key="PE.EnvironmentAspect.Base">2</value>
     <valuelist type="QVariantList" key="PE.EnvironmentAspect.Changes"/>
-    <value type="QString" key="ProjectExplorer.CustomExecutableRunConfiguration.Executable">E:\work\Myqq\MyQQ_version\MyQQ_version\LoginAndRegister\main.cpp</value>
+    <value type="QString" key="ProjectExplorer.CustomExecutableRunConfiguration.Executable">E:\work\Myqq\MyQQ_version\build-MyQQ_version-Desktop_Qt_5_14_0_MinGW_64_bit-Debug\LoginAndRegister\LoginAndRegister.exe</value>
     <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">ProjectExplorer.CustomExecutableRunConfiguration</value>
     <value type="QString" key="ProjectExplorer.RunConfiguration.BuildKey"></value>
     <value type="QString" key="RunConfiguration.Arguments"></value>
@@ -542,7 +542,7 @@
     <value type="bool" key="RunConfiguration.UseMultiProcess">false</value>
     <value type="bool" key="RunConfiguration.UseQmlDebugger">false</value>
     <value type="bool" key="RunConfiguration.UseQmlDebuggerAuto">true</value>
-    <value type="QString" key="RunConfiguration.WorkingDirectory">E:/work/Myqq/MyQQ_version/MyQQ_version/LoginAndRegister</value>
+    <value type="QString" key="RunConfiguration.WorkingDirectory">E:/work/Myqq/MyQQ_version/build-MyQQ_version-Desktop_Qt_5_14_0_MinGW_64_bit-Debug</value>
     <value type="QString" key="RunConfiguration.WorkingDirectory.default"></value>
    </valuemap>
    <valuemap type="QVariantMap" key="ProjectExplorer.Target.RunConfiguration.1">

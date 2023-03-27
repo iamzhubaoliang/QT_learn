@@ -1,6 +1,0 @@
-#topframe{
-background-color:#C4E1FF;
-/*background:url(:/qss/topframe.jpeg);*/
-border:0px;
-padding:0px;
-}

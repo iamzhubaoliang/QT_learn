@@ -1,8 +1,0 @@
-<RCC>
-    <qresource prefix="/qss">
-        <file>topframe.qss</file>
-        <file>topframe.jpeg</file>
-        <file>bottomframe.qss</file>
-    </qresource>
-    <qresource prefix="/image"/>
-</RCC>
