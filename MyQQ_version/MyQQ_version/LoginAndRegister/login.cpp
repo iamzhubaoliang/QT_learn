@@ -142,6 +142,9 @@ void Login::on_login_clicked()
     if(res==1)
     {
         QMessageBox::information(this,"提示","成功登录");
+
+
+
     }else if(res==0){
         QMessageBox::warning(this,"提示","登录失败");
     }else if (res==-1)
@@ -169,7 +172,7 @@ void Login::createUsernameFile()
 //   std::printf("aaa");
 
    mani_file*  mani=new mani_file();
-   mani->createFile("xxxxx.txt");
+   mani->createFile("name.txt");
 
 }
 

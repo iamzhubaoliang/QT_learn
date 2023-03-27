@@ -25,8 +25,14 @@ private slots:
     void on_pushButton_clicked();
 
 
+
+    void on_selectBtn_clicked();
+
+    void on_regBtn_clicked();
+
 private:
     Ui::Register *ui;
+    QString pictureName;
 
 };
 

@@ -3,6 +3,7 @@
         <file>topframe.qss</file>
         <file>topframe.jpeg</file>
         <file>bottomframe.qss</file>
+        <file>register.qss</file>
     </qresource>
     <qresource prefix="/image"/>
 </RCC>
