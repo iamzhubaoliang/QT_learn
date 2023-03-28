@@ -3,6 +3,7 @@
 
 #include <QWidget>
 #include <QSqlDatabase>
+#include <QSqlQuery>
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -30,6 +31,7 @@ private:
     QPoint movePoint;
     bool mousePress;
     QSqlDatabase db;
+    QSqlQuery loginRes;
 
     void ConnectDatabase();
     int userLogin();

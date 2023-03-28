@@ -18,6 +18,9 @@
 #include <fstream>
 #include "mani_file.h"
 #include <string>
+#include <QBuffer>
+#include <QImageReader>
+//#include
 
 
 Login::Login(QWidget *parent)
@@ -127,10 +130,11 @@ void Login::ConnectDatabase()
 int Login::userLogin()
 {
     QSqlQuery query;
-    query.prepare("select qqid,qqpassword from appuser where qqid=:qqid and qqpassword=:qqpassword ");
+    query.prepare("select qqid,qqpassword,avatar from appuser where qqid=:qqid and qqpassword=:qqpassword ");
     query.bindValue(":qqid",ui->username->text());
     query.bindValue(":qqpassword",ui->password->text());
     query.exec();
+    loginRes=query;
     return query.size();
 
 }
@@ -142,7 +146,17 @@ void Login::on_login_clicked()
     if(res==1)
     {
         QMessageBox::information(this,"提示","成功登录");
+        //设置头像
+        loginRes.first();
+        QVariant tmp=loginRes.value(2);
 
+        QByteArray img=tmp.value<QByteArray>();
+        QBuffer buffer(&img);
+        buffer.open(QIODevice::ReadOnly);
+        QImageReader reader(&buffer,"png");
+        QImage picture=reader.read();
+        ui->avatar->setScaledContents(true);
+        ui->avatar->setPixmap(QPixmap::fromImage(picture));
 
 
     }else if(res==0){
