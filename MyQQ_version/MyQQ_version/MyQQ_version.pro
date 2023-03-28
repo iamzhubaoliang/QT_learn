@@ -1,7 +1,8 @@
 TEMPLATE=subdirs
 SUBDIRS+= \
     LoginAndRegister \
-    ManipulateFile
+    ManipulateFile \
+    logTool
 
 
 

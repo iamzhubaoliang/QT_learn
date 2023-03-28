@@ -36,7 +36,7 @@ private:
     void ConnectDatabase();
     int userLogin();
     void createUsernameFile();
-
+    void getTheCompleterDatas(QWidget *parent,QStringList *wordlist);
 
 protected:
     void mouseMoveEvent(QMouseEvent *event) ;
@@ -46,5 +46,6 @@ protected:
 private slots:
     void on_login_clicked();
     void on_pushButton_clicked();
+
 };
 #endif // LOGIN_H

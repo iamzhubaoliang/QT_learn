@@ -50,3 +50,14 @@ else:unix: LIBS += -L$$OUT_PWD/../ManipulateFile/ -lManipulateFile
 
 INCLUDEPATH += $$PWD/../ManipulateFile
 DEPENDPATH += $$PWD/../ManipulateFile
+
+
+
+
+
+win32:CONFIG(release, debug|release): LIBS += -L$$OUT_PWD/../logTool/ -llogTool
+else:win32:CONFIG(debug, debug|release): LIBS += -L$$OUT_PWD/../logTool/ -llogTool
+else:unix: LIBS += -L$$OUT_PWD/../logTool/ -llogTool
+
+INCLUDEPATH += $$PWD/../logTool
+DEPENDPATH += $$PWD/../logTool

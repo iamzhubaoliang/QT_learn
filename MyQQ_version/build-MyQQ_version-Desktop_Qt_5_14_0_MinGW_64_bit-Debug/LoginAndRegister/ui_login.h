@@ -96,7 +96,7 @@ public:
         username->setPlaceholderText(QCoreApplication::translate("Login", "\350\276\223\345\205\245ID", nullptr));
         password->setPlaceholderText(QCoreApplication::translate("Login", "\350\276\223\345\205\245\345\257\206\347\240\201", nullptr));
         login->setText(QCoreApplication::translate("Login", "\347\231\273\345\275\225", nullptr));
-        pushButton->setText(QCoreApplication::translate("Login", "PushButton", nullptr));
+        pushButton->setText(QCoreApplication::translate("Login", "\346\263\250\345\206\214", nullptr));
     } // retranslateUi
 
 };

@@ -14,16 +14,17 @@ public:
       mani_file();
       ~mani_file();
       bool createFile(std::string fileName);
-      bool openFileForRead(std::string fileName, std::ios_base::openmode openmMode);
+      bool openFileForRead(std::string fileName, std::ios_base::openmode openmMode,std::fstream *readF);
 //
 //      bool writeFileLine(std::string content);
-      char* readFileForImage();
-      void closeFile();
+      char* readFileForImage(std::fstream *readF);
+      char* readOneLine(std::fstream *readF);
+      void  closeFile(std::fstream *readF);
 
 private:
       std::ios_base::openmode openmMode;
       std::string fileName;
-      std::ifstream readF;
+//      std::fstream *readF;
    };
 
 #endif // MANI_FILE_H

@@ -2,6 +2,7 @@
 
 #include <QApplication>
 #include <QtCore>
+#include "spdlog/spdlog.h"
 
 int main(int argc, char *argv[])
 {
@@ -11,5 +12,6 @@ int main(int argc, char *argv[])
     QApplication a(argc, argv);
     Login w;
     w.show();
+    spdlog::set_level(spdlog::level::debug);
     return a.exec();
 }

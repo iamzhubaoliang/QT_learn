@@ -17,10 +17,10 @@ CXX           = g++
 DEFINES       = -DUNICODE -D_UNICODE -DWIN32 -DMINGW_HAS_SECURE_API=1 -DQT_DEPRECATED_WARNINGS -DQT_QML_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_SQL_LIB -DQT_CORE_LIB -DQT_NEEDS_QMAIN
 CFLAGS        = -fno-keep-inline-dllexport -g -Wall -Wextra -Wextra $(DEFINES)
 CXXFLAGS      = -fno-keep-inline-dllexport -g -std=gnu++11 -Wall -Wextra -Wextra -fexceptions -mthreads $(DEFINES)
-INCPATH       = -I..\..\MyQQ_version\LoginAndRegister -I. -I..\..\MyQQ_version\ManipulateFile -ID:\solft\qt\5.14.0\mingw73_64\include -ID:\solft\qt\5.14.0\mingw73_64\include\QtWidgets -ID:\solft\qt\5.14.0\mingw73_64\include\QtGui -ID:\solft\qt\5.14.0\mingw73_64\include\QtANGLE -ID:\solft\qt\5.14.0\mingw73_64\include\QtSql -ID:\solft\qt\5.14.0\mingw73_64\include\QtCore -I. -I. -I/include -ID:\solft\qt\5.14.0\mingw73_64\mkspecs\win32-g++ 
+INCPATH       = -I..\..\MyQQ_version\LoginAndRegister -I. -I..\..\MyQQ_version\ManipulateFile -I..\..\MyQQ_version\logTool -ID:\solft\qt\5.14.0\mingw73_64\include -ID:\solft\qt\5.14.0\mingw73_64\include\QtWidgets -ID:\solft\qt\5.14.0\mingw73_64\include\QtGui -ID:\solft\qt\5.14.0\mingw73_64\include\QtANGLE -ID:\solft\qt\5.14.0\mingw73_64\include\QtSql -ID:\solft\qt\5.14.0\mingw73_64\include\QtCore -I. -I. -I/include -ID:\solft\qt\5.14.0\mingw73_64\mkspecs\win32-g++ 
 LINKER      =        g++
 LFLAGS        =        -Wl,-subsystem,windows -mthreads
-LIBS        =        -LE:\work\Myqq\MyQQ_version\build-MyQQ_version-Desktop_Qt_5_14_0_MinGW_64_bit-Debug\ManipulateFile -lManipulateFile D:\solft\qt\5.14.0\mingw73_64\lib\libQt5Widgets.a D:\solft\qt\5.14.0\mingw73_64\lib\libQt5Gui.a D:\solft\qt\5.14.0\mingw73_64\lib\libQt5Sql.a D:\solft\qt\5.14.0\mingw73_64\lib\libQt5Core.a LoginAndRegister_resource_res.o  -lmingw32 D:\solft\qt\5.14.0\mingw73_64\lib\libqtmain.a -LC:\openssl\lib -LC:\Utils\my_sql\mysql-5.7.25-winx64\lib -LC:\Utils\postgresql\pgsql\lib -lshell32 
+LIBS        =        -LE:\work\Myqq\MyQQ_version\build-MyQQ_version-Desktop_Qt_5_14_0_MinGW_64_bit-Debug\ManipulateFile -lManipulateFile -LE:\work\Myqq\MyQQ_version\build-MyQQ_version-Desktop_Qt_5_14_0_MinGW_64_bit-Debug\logTool -llogTool D:\solft\qt\5.14.0\mingw73_64\lib\libQt5Widgets.a D:\solft\qt\5.14.0\mingw73_64\lib\libQt5Gui.a D:\solft\qt\5.14.0\mingw73_64\lib\libQt5Sql.a D:\solft\qt\5.14.0\mingw73_64\lib\libQt5Core.a LoginAndRegister_resource_res.o  -lmingw32 D:\solft\qt\5.14.0\mingw73_64\lib\libqtmain.a -LC:\openssl\lib -LC:\Utils\my_sql\mysql-5.7.25-winx64\lib -LC:\Utils\postgresql\pgsql\lib -lshell32 
 QMAKE         = D:\solft\qt\5.14.0\mingw73_64\bin\qmake.exe
 DEL_FILE      = del
 CHK_DIR_EXISTS= if not exist
@@ -651,7 +651,7 @@ moc_Register.cpp: ../../MyQQ_version/LoginAndRegister/Register.h \
 		D:/solft/qt/5.14.0/mingw73_64/include/QtGui/qtouchdevice.h \
 		moc_predefs.h \
 		D:/solft/qt/5.14.0/mingw73_64/bin/moc.exe
-	D:\solft\qt\5.14.0\mingw73_64\bin\moc.exe $(DEFINES) --include E:/work/Myqq/MyQQ_version/build-MyQQ_version-Desktop_Qt_5_14_0_MinGW_64_bit-Debug/LoginAndRegister/moc_predefs.h -ID:/solft/qt/5.14.0/mingw73_64/mkspecs/win32-g++ -IE:/work/Myqq/MyQQ_version/MyQQ_version/LoginAndRegister -IE:/work/Myqq/MyQQ_version/MyQQ_version/ManipulateFile -ID:/solft/qt/5.14.0/mingw73_64/include -ID:/solft/qt/5.14.0/mingw73_64/include/QtWidgets -ID:/solft/qt/5.14.0/mingw73_64/include/QtGui -ID:/solft/qt/5.14.0/mingw73_64/include/QtANGLE -ID:/solft/qt/5.14.0/mingw73_64/include/QtSql -ID:/solft/qt/5.14.0/mingw73_64/include/QtCore -I. -ID:/solft/qt/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++ -ID:/solft/qt/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/x86_64-w64-mingw32 -ID:/solft/qt/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/backward -ID:/solft/qt/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include -ID:/solft/qt/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include-fixed -ID:/solft/qt/Tools/mingw730_64/x86_64-w64-mingw32/include ..\..\MyQQ_version\LoginAndRegister\Register.h -o moc_Register.cpp
+	D:\solft\qt\5.14.0\mingw73_64\bin\moc.exe $(DEFINES) --include E:/work/Myqq/MyQQ_version/build-MyQQ_version-Desktop_Qt_5_14_0_MinGW_64_bit-Debug/LoginAndRegister/moc_predefs.h -ID:/solft/qt/5.14.0/mingw73_64/mkspecs/win32-g++ -IE:/work/Myqq/MyQQ_version/MyQQ_version/LoginAndRegister -IE:/work/Myqq/MyQQ_version/MyQQ_version/ManipulateFile -IE:/work/Myqq/MyQQ_version/MyQQ_version/logTool -ID:/solft/qt/5.14.0/mingw73_64/include -ID:/solft/qt/5.14.0/mingw73_64/include/QtWidgets -ID:/solft/qt/5.14.0/mingw73_64/include/QtGui -ID:/solft/qt/5.14.0/mingw73_64/include/QtANGLE -ID:/solft/qt/5.14.0/mingw73_64/include/QtSql -ID:/solft/qt/5.14.0/mingw73_64/include/QtCore -I. -ID:/solft/qt/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++ -ID:/solft/qt/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/x86_64-w64-mingw32 -ID:/solft/qt/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/backward -ID:/solft/qt/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include -ID:/solft/qt/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include-fixed -ID:/solft/qt/Tools/mingw730_64/x86_64-w64-mingw32/include ..\..\MyQQ_version\LoginAndRegister\Register.h -o moc_Register.cpp
 
 moc_login.cpp: ../../MyQQ_version/LoginAndRegister/login.h \
 		D:/solft/qt/5.14.0/mingw73_64/include/QtWidgets/QWidget \
@@ -762,9 +762,11 @@ moc_login.cpp: ../../MyQQ_version/LoginAndRegister/login.h \
 		D:/solft/qt/5.14.0/mingw73_64/include/QtSql/qsqldatabase.h \
 		D:/solft/qt/5.14.0/mingw73_64/include/QtSql/qtsqlglobal.h \
 		D:/solft/qt/5.14.0/mingw73_64/include/QtSql/qtsql-config.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtSql/QSqlQuery \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtSql/qsqlquery.h \
 		moc_predefs.h \
 		D:/solft/qt/5.14.0/mingw73_64/bin/moc.exe
-	D:\solft\qt\5.14.0\mingw73_64\bin\moc.exe $(DEFINES) --include E:/work/Myqq/MyQQ_version/build-MyQQ_version-Desktop_Qt_5_14_0_MinGW_64_bit-Debug/LoginAndRegister/moc_predefs.h -ID:/solft/qt/5.14.0/mingw73_64/mkspecs/win32-g++ -IE:/work/Myqq/MyQQ_version/MyQQ_version/LoginAndRegister -IE:/work/Myqq/MyQQ_version/MyQQ_version/ManipulateFile -ID:/solft/qt/5.14.0/mingw73_64/include -ID:/solft/qt/5.14.0/mingw73_64/include/QtWidgets -ID:/solft/qt/5.14.0/mingw73_64/include/QtGui -ID:/solft/qt/5.14.0/mingw73_64/include/QtANGLE -ID:/solft/qt/5.14.0/mingw73_64/include/QtSql -ID:/solft/qt/5.14.0/mingw73_64/include/QtCore -I. -ID:/solft/qt/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++ -ID:/solft/qt/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/x86_64-w64-mingw32 -ID:/solft/qt/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/backward -ID:/solft/qt/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include -ID:/solft/qt/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include-fixed -ID:/solft/qt/Tools/mingw730_64/x86_64-w64-mingw32/include ..\..\MyQQ_version\LoginAndRegister\login.h -o moc_login.cpp
+	D:\solft\qt\5.14.0\mingw73_64\bin\moc.exe $(DEFINES) --include E:/work/Myqq/MyQQ_version/build-MyQQ_version-Desktop_Qt_5_14_0_MinGW_64_bit-Debug/LoginAndRegister/moc_predefs.h -ID:/solft/qt/5.14.0/mingw73_64/mkspecs/win32-g++ -IE:/work/Myqq/MyQQ_version/MyQQ_version/LoginAndRegister -IE:/work/Myqq/MyQQ_version/MyQQ_version/ManipulateFile -IE:/work/Myqq/MyQQ_version/MyQQ_version/logTool -ID:/solft/qt/5.14.0/mingw73_64/include -ID:/solft/qt/5.14.0/mingw73_64/include/QtWidgets -ID:/solft/qt/5.14.0/mingw73_64/include/QtGui -ID:/solft/qt/5.14.0/mingw73_64/include/QtANGLE -ID:/solft/qt/5.14.0/mingw73_64/include/QtSql -ID:/solft/qt/5.14.0/mingw73_64/include/QtCore -I. -ID:/solft/qt/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++ -ID:/solft/qt/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/x86_64-w64-mingw32 -ID:/solft/qt/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/backward -ID:/solft/qt/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include -ID:/solft/qt/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include-fixed -ID:/solft/qt/Tools/mingw730_64/x86_64-w64-mingw32/include ..\..\MyQQ_version\LoginAndRegister\login.h -o moc_login.cpp
 
 compiler_moc_objc_header_make_all:
 compiler_moc_objc_header_clean:
@@ -1030,6 +1032,8 @@ login.o: ../../MyQQ_version/LoginAndRegister/login.cpp ../../MyQQ_version/LoginA
 		D:/solft/qt/5.14.0/mingw73_64/include/QtSql/qsqldatabase.h \
 		D:/solft/qt/5.14.0/mingw73_64/include/QtSql/qtsqlglobal.h \
 		D:/solft/qt/5.14.0/mingw73_64/include/QtSql/qtsql-config.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtSql/QSqlQuery \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtSql/qsqlquery.h \
 		ui_login.h \
 		../../MyQQ_version/LoginAndRegister/Register.h \
 		D:/solft/qt/5.14.0/mingw73_64/include/QtGui/QPalette \
@@ -1046,12 +1050,63 @@ login.o: ../../MyQQ_version/LoginAndRegister/login.cpp ../../MyQQ_version/LoginA
 		D:/solft/qt/5.14.0/mingw73_64/include/QtWidgets/qdialog.h \
 		D:/solft/qt/5.14.0/mingw73_64/include/QtSql/QSqlError \
 		D:/solft/qt/5.14.0/mingw73_64/include/QtSql/qsqlerror.h \
-		D:/solft/qt/5.14.0/mingw73_64/include/QtSql/QSqlQuery \
-		D:/solft/qt/5.14.0/mingw73_64/include/QtSql/qsqlquery.h \
 		D:/solft/qt/5.14.0/mingw73_64/include/QtWidgets/QCompleter \
 		D:/solft/qt/5.14.0/mingw73_64/include/QtWidgets/qcompleter.h \
 		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qabstractitemmodel.h \
-		../../MyQQ_version/ManipulateFile/mani_file.h
+		../../MyQQ_version/ManipulateFile/mani_file.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/QBuffer \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qbuffer.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtGui/QImageReader \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtGui/qimagereader.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qcoreapplication.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qeventloop.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtGui/qimageiohandler.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qplugin.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qpointer.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qjsonobject.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qjsonvalue.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qfactoryinterface.h \
+		../../MyQQ_version/logTool/spdlog/spdlog.h \
+		../../MyQQ_version/logTool/spdlog/common.h \
+		../../MyQQ_version/logTool/spdlog/tweakme.h \
+		../../MyQQ_version/logTool/spdlog/details/null_mutex.h \
+		../../MyQQ_version/logTool/spdlog/fmt/fmt.h \
+		../../MyQQ_version/logTool/spdlog/fmt/bundled/core.h \
+		../../MyQQ_version/logTool/spdlog/fmt/bundled/format.h \
+		../../MyQQ_version/logTool/spdlog/fmt/bundled/format-inl.h \
+		../../MyQQ_version/logTool/spdlog/fmt/xchar.h \
+		../../MyQQ_version/logTool/spdlog/fmt/bundled/xchar.h \
+		../../MyQQ_version/logTool/spdlog/common-inl.h \
+		../../MyQQ_version/logTool/spdlog/details/registry.h \
+		../../MyQQ_version/logTool/spdlog/details/periodic_worker.h \
+		../../MyQQ_version/logTool/spdlog/details/periodic_worker-inl.h \
+		../../MyQQ_version/logTool/spdlog/details/registry-inl.h \
+		../../MyQQ_version/logTool/spdlog/logger.h \
+		../../MyQQ_version/logTool/spdlog/details/log_msg.h \
+		../../MyQQ_version/logTool/spdlog/details/log_msg-inl.h \
+		../../MyQQ_version/logTool/spdlog/details/os.h \
+		../../MyQQ_version/logTool/spdlog/details/os-inl.h \
+		../../MyQQ_version/logTool/spdlog/details/windows_include.h \
+		../../MyQQ_version/logTool/spdlog/details/backtracer.h \
+		../../MyQQ_version/logTool/spdlog/details/log_msg_buffer.h \
+		../../MyQQ_version/logTool/spdlog/details/log_msg_buffer-inl.h \
+		../../MyQQ_version/logTool/spdlog/details/circular_q.h \
+		../../MyQQ_version/logTool/spdlog/details/backtracer-inl.h \
+		../../MyQQ_version/logTool/spdlog/logger-inl.h \
+		../../MyQQ_version/logTool/spdlog/sinks/sink.h \
+		../../MyQQ_version/logTool/spdlog/formatter.h \
+		../../MyQQ_version/logTool/spdlog/sinks/sink-inl.h \
+		../../MyQQ_version/logTool/spdlog/pattern_formatter.h \
+		../../MyQQ_version/logTool/spdlog/pattern_formatter-inl.h \
+		../../MyQQ_version/logTool/spdlog/details/fmt_helper.h \
+		../../MyQQ_version/logTool/spdlog/sinks/wincolor_sink.h \
+		../../MyQQ_version/logTool/spdlog/details/console_globals.h \
+		../../MyQQ_version/logTool/spdlog/sinks/wincolor_sink-inl.h \
+		../../MyQQ_version/logTool/spdlog/sinks/ansicolor_sink.h \
+		../../MyQQ_version/logTool/spdlog/sinks/ansicolor_sink-inl.h \
+		../../MyQQ_version/logTool/spdlog/version.h \
+		../../MyQQ_version/logTool/spdlog/details/synchronous_factory.h \
+		../../MyQQ_version/logTool/spdlog/spdlog-inl.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o login.o ..\..\MyQQ_version\LoginAndRegister\login.cpp
 
 main.o: ../../MyQQ_version/LoginAndRegister/main.cpp ../../MyQQ_version/LoginAndRegister/login.h \
@@ -1163,6 +1218,8 @@ main.o: ../../MyQQ_version/LoginAndRegister/main.cpp ../../MyQQ_version/LoginAnd
 		D:/solft/qt/5.14.0/mingw73_64/include/QtSql/qsqldatabase.h \
 		D:/solft/qt/5.14.0/mingw73_64/include/QtSql/qtsqlglobal.h \
 		D:/solft/qt/5.14.0/mingw73_64/include/QtSql/qtsql-config.h \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtSql/QSqlQuery \
+		D:/solft/qt/5.14.0/mingw73_64/include/QtSql/qsqlquery.h \
 		D:/solft/qt/5.14.0/mingw73_64/include/QtWidgets/QApplication \
 		D:/solft/qt/5.14.0/mingw73_64/include/QtWidgets/qapplication.h \
 		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qcoreapplication.h \
@@ -1291,7 +1348,48 @@ main.o: ../../MyQQ_version/LoginAndRegister/main.cpp ../../MyQQ_version/LoginAnd
 		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qwaitcondition.h \
 		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qwineventnotifier.h \
 		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qxmlstream.h \
-		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qtcoreversion.h
+		D:/solft/qt/5.14.0/mingw73_64/include/QtCore/qtcoreversion.h \
+		../../MyQQ_version/logTool/spdlog/spdlog.h \
+		../../MyQQ_version/logTool/spdlog/common.h \
+		../../MyQQ_version/logTool/spdlog/tweakme.h \
+		../../MyQQ_version/logTool/spdlog/details/null_mutex.h \
+		../../MyQQ_version/logTool/spdlog/fmt/fmt.h \
+		../../MyQQ_version/logTool/spdlog/fmt/bundled/core.h \
+		../../MyQQ_version/logTool/spdlog/fmt/bundled/format.h \
+		../../MyQQ_version/logTool/spdlog/fmt/bundled/format-inl.h \
+		../../MyQQ_version/logTool/spdlog/fmt/xchar.h \
+		../../MyQQ_version/logTool/spdlog/fmt/bundled/xchar.h \
+		../../MyQQ_version/logTool/spdlog/common-inl.h \
+		../../MyQQ_version/logTool/spdlog/details/registry.h \
+		../../MyQQ_version/logTool/spdlog/details/periodic_worker.h \
+		../../MyQQ_version/logTool/spdlog/details/periodic_worker-inl.h \
+		../../MyQQ_version/logTool/spdlog/details/registry-inl.h \
+		../../MyQQ_version/logTool/spdlog/logger.h \
+		../../MyQQ_version/logTool/spdlog/details/log_msg.h \
+		../../MyQQ_version/logTool/spdlog/details/log_msg-inl.h \
+		../../MyQQ_version/logTool/spdlog/details/os.h \
+		../../MyQQ_version/logTool/spdlog/details/os-inl.h \
+		../../MyQQ_version/logTool/spdlog/details/windows_include.h \
+		../../MyQQ_version/logTool/spdlog/details/backtracer.h \
+		../../MyQQ_version/logTool/spdlog/details/log_msg_buffer.h \
+		../../MyQQ_version/logTool/spdlog/details/log_msg_buffer-inl.h \
+		../../MyQQ_version/logTool/spdlog/details/circular_q.h \
+		../../MyQQ_version/logTool/spdlog/details/backtracer-inl.h \
+		../../MyQQ_version/logTool/spdlog/logger-inl.h \
+		../../MyQQ_version/logTool/spdlog/sinks/sink.h \
+		../../MyQQ_version/logTool/spdlog/formatter.h \
+		../../MyQQ_version/logTool/spdlog/sinks/sink-inl.h \
+		../../MyQQ_version/logTool/spdlog/pattern_formatter.h \
+		../../MyQQ_version/logTool/spdlog/pattern_formatter-inl.h \
+		../../MyQQ_version/logTool/spdlog/details/fmt_helper.h \
+		../../MyQQ_version/logTool/spdlog/sinks/wincolor_sink.h \
+		../../MyQQ_version/logTool/spdlog/details/console_globals.h \
+		../../MyQQ_version/logTool/spdlog/sinks/wincolor_sink-inl.h \
+		../../MyQQ_version/logTool/spdlog/sinks/ansicolor_sink.h \
+		../../MyQQ_version/logTool/spdlog/sinks/ansicolor_sink-inl.h \
+		../../MyQQ_version/logTool/spdlog/version.h \
+		../../MyQQ_version/logTool/spdlog/details/synchronous_factory.h \
+		../../MyQQ_version/logTool/spdlog/spdlog-inl.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o main.o ..\..\MyQQ_version\LoginAndRegister\main.cpp
 
 qrc_loginResource.o: qrc_loginResource.cpp 

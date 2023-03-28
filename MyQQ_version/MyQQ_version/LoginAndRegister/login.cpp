@@ -20,6 +20,7 @@
 #include <string>
 #include <QBuffer>
 #include <QImageReader>
+#include "spdlog/spdlog.h"
 //#include
 
 
@@ -52,20 +53,54 @@ Login::Login(QWidget *parent)
     ui->close->setIcon( QIcon(QApplication::style()->standardIcon(QStyle::SP_TitleBarCloseButton)));
     ui->username->setValidator(new QRegExpValidator(QRegExp("[0-9]+$")));//设置id框只能输入数字
 
-
-
+    createUsernameFile();//创建自动补全的信息文档
 
     //自动补全
     QStringList wordlist;
-    wordlist<<"1"<<"12"<<"113"<<"24";//这里会用本地文件存储
+    Login::getTheCompleterDatas(this,&wordlist);
     QCompleter *completer=new QCompleter(wordlist,this);
     completer->setCaseSensitivity(Qt::CaseInsensitive);
     ui->username->setCompleter(completer);
-    createUsernameFile();
-
 
 
 }
+/**
+ * 创建候选框文件
+ */
+void Login::createUsernameFile()
+{
+   mani_file*  mani=new mani_file();
+   mani->createFile("name.txt");
+}
+void Login::getTheCompleterDatas(QWidget *parent,QStringList *wordlist)
+{
+
+    mani_file * manif=new mani_file();
+//    std::fstream *readF=NULL;
+
+    std::fstream readFile("name.txt",std::ios::in);
+    if(readFile.is_open())
+    {
+        spdlog::info("已经成功打开");
+    }
+
+
+//    if(!manif->openFileForRead("name.txt",std::ios::in,readF))
+//    {
+//       QMessageBox::information(parent,"Message","内部错误");
+//       spdlog::error("读取文件错误啦");
+//    }
+//    qDebug()<<readF;
+   char *content;
+   while((content=manif->readOneLine(&readFile))!=NULL)
+    {
+       *wordlist<<content;
+
+    }
+}
+
+
+
 
 /****************************************
  * 鼠标拖动窗口事件开始
@@ -78,7 +113,7 @@ void Login::mousePressEvent(QMouseEvent *event)
         mousePress=true;
     }
     movePoint=event->globalPos()-pos();
-//    qDebug()<<"移动";
+
 
 }
 
@@ -115,12 +150,12 @@ void Login::ConnectDatabase()
         db.setPassword("1234");
         bool ok = db.open();
         if (ok){
-//            QMessageBox::information(this, "infor", "success");
-             qDebug() <<"数据库连接成功";
+//           QMessageBox::information(this, "infor", "success");
+             spdlog::info("数据库连接成功");
         }
         else {
             QMessageBox::information(this, "infor", "open failed");
-            qDebug() << db.lastError().text();
+//            spdlog::error("错误信息:{}",db.lastError().text());
         }
 }
 
@@ -176,18 +211,6 @@ void Login::on_pushButton_clicked()
     uiRegister->setHideWindow(this);
 }
 
-/**
- * 创建候选框文件
- */
-void Login::createUsernameFile()
-{
-
-//   std::printf("aaa");a
-
-   mani_file*  mani=new mani_file();
-   mani->createFile("name.txt");
-
-}
 
 
 

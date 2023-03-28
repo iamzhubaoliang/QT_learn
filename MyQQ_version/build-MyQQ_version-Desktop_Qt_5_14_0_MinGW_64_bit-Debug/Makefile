@@ -36,7 +36,8 @@ SED           = $(QMAKE) -install sed
 MOVE          = move
 SUBTARGETS    =  \
 		sub-LoginAndRegister \
-		sub-ManipulateFile
+		sub-ManipulateFile \
+		sub-logTool
 
 
 sub-LoginAndRegister-qmake_all:  FORCE
@@ -89,6 +90,31 @@ sub-ManipulateFile-install_subtargets: FORCE
 sub-ManipulateFile-uninstall_subtargets: FORCE
 	@if not exist ManipulateFile\ mkdir ManipulateFile\ & if not exist ManipulateFile\ exit 1
 	cd ManipulateFile\ && ( if not exist Makefile $(QMAKE) -o Makefile E:\work\Myqq\MyQQ_version\MyQQ_version\ManipulateFile\ManipulateFile.pro -spec win32-g++ "CONFIG+=debug" "CONFIG+=qml_debug" ) && $(MAKE) -f Makefile uninstall
+sub-logTool-qmake_all:  FORCE
+	@if not exist logTool\ mkdir logTool\ & if not exist logTool\ exit 1
+	cd logTool\ && $(QMAKE) -o Makefile E:\work\Myqq\MyQQ_version\MyQQ_version\logTool\logTool.pro -spec win32-g++ "CONFIG+=debug" "CONFIG+=qml_debug"
+	cd logTool\ && $(MAKE) -f Makefile qmake_all
+sub-logTool: FORCE
+	@if not exist logTool\ mkdir logTool\ & if not exist logTool\ exit 1
+	cd logTool\ && ( if not exist Makefile $(QMAKE) -o Makefile E:\work\Myqq\MyQQ_version\MyQQ_version\logTool\logTool.pro -spec win32-g++ "CONFIG+=debug" "CONFIG+=qml_debug" ) && $(MAKE) -f Makefile
+sub-logTool-make_first: FORCE
+	@if not exist logTool\ mkdir logTool\ & if not exist logTool\ exit 1
+	cd logTool\ && ( if not exist Makefile $(QMAKE) -o Makefile E:\work\Myqq\MyQQ_version\MyQQ_version\logTool\logTool.pro -spec win32-g++ "CONFIG+=debug" "CONFIG+=qml_debug" ) && $(MAKE) -f Makefile 
+sub-logTool-all: FORCE
+	@if not exist logTool\ mkdir logTool\ & if not exist logTool\ exit 1
+	cd logTool\ && ( if not exist Makefile $(QMAKE) -o Makefile E:\work\Myqq\MyQQ_version\MyQQ_version\logTool\logTool.pro -spec win32-g++ "CONFIG+=debug" "CONFIG+=qml_debug" ) && $(MAKE) -f Makefile all
+sub-logTool-clean: FORCE
+	@if not exist logTool\ mkdir logTool\ & if not exist logTool\ exit 1
+	cd logTool\ && ( if not exist Makefile $(QMAKE) -o Makefile E:\work\Myqq\MyQQ_version\MyQQ_version\logTool\logTool.pro -spec win32-g++ "CONFIG+=debug" "CONFIG+=qml_debug" ) && $(MAKE) -f Makefile clean
+sub-logTool-distclean: FORCE
+	@if not exist logTool\ mkdir logTool\ & if not exist logTool\ exit 1
+	cd logTool\ && ( if not exist Makefile $(QMAKE) -o Makefile E:\work\Myqq\MyQQ_version\MyQQ_version\logTool\logTool.pro -spec win32-g++ "CONFIG+=debug" "CONFIG+=qml_debug" ) && $(MAKE) -f Makefile distclean
+sub-logTool-install_subtargets: FORCE
+	@if not exist logTool\ mkdir logTool\ & if not exist logTool\ exit 1
+	cd logTool\ && ( if not exist Makefile $(QMAKE) -o Makefile E:\work\Myqq\MyQQ_version\MyQQ_version\logTool\logTool.pro -spec win32-g++ "CONFIG+=debug" "CONFIG+=qml_debug" ) && $(MAKE) -f Makefile install
+sub-logTool-uninstall_subtargets: FORCE
+	@if not exist logTool\ mkdir logTool\ & if not exist logTool\ exit 1
+	cd logTool\ && ( if not exist Makefile $(QMAKE) -o Makefile E:\work\Myqq\MyQQ_version\MyQQ_version\logTool\logTool.pro -spec win32-g++ "CONFIG+=debug" "CONFIG+=qml_debug" ) && $(MAKE) -f Makefile uninstall
 
 Makefile: ../MyQQ_version/MyQQ_version.pro D:/solft/qt/5.14.0/mingw73_64/mkspecs/win32-g++/qmake.conf D:/solft/qt/5.14.0/mingw73_64/mkspecs/features/spec_pre.prf \
 		D:/solft/qt/5.14.0/mingw73_64/mkspecs/qdevice.pri \
@@ -267,6 +293,7 @@ Makefile: ../MyQQ_version/MyQQ_version.pro D:/solft/qt/5.14.0/mingw73_64/mkspecs
 		D:/solft/qt/5.14.0/mingw73_64/mkspecs/features/qt_config.prf \
 		D:/solft/qt/5.14.0/mingw73_64/mkspecs/win32-g++/qmake.conf \
 		D:/solft/qt/5.14.0/mingw73_64/mkspecs/features/spec_post.prf \
+		.qmake.stash \
 		D:/solft/qt/5.14.0/mingw73_64/mkspecs/features/exclusive_builds.prf \
 		D:/solft/qt/5.14.0/mingw73_64/mkspecs/features/toolchain.prf \
 		D:/solft/qt/5.14.0/mingw73_64/mkspecs/features/default_pre.prf \
@@ -462,6 +489,7 @@ D:/solft/qt/5.14.0/mingw73_64/mkspecs/features/qt_functions.prf:
 D:/solft/qt/5.14.0/mingw73_64/mkspecs/features/qt_config.prf:
 D:/solft/qt/5.14.0/mingw73_64/mkspecs/win32-g++/qmake.conf:
 D:/solft/qt/5.14.0/mingw73_64/mkspecs/features/spec_post.prf:
+.qmake.stash:
 D:/solft/qt/5.14.0/mingw73_64/mkspecs/features/exclusive_builds.prf:
 D:/solft/qt/5.14.0/mingw73_64/mkspecs/features/toolchain.prf:
 D:/solft/qt/5.14.0/mingw73_64/mkspecs/features/default_pre.prf:
@@ -482,16 +510,16 @@ D:/solft/qt/5.14.0/mingw73_64/mkspecs/features/lex.prf:
 qmake: FORCE
 	@$(QMAKE) -o Makefile ..\MyQQ_version\MyQQ_version.pro -spec win32-g++ "CONFIG+=debug" "CONFIG+=qml_debug"
 
-qmake_all: sub-LoginAndRegister-qmake_all sub-ManipulateFile-qmake_all FORCE
+qmake_all: sub-LoginAndRegister-qmake_all sub-ManipulateFile-qmake_all sub-logTool-qmake_all FORCE
 
-make_first: sub-LoginAndRegister-make_first sub-ManipulateFile-make_first  FORCE
-all: sub-LoginAndRegister-all sub-ManipulateFile-all  FORCE
-clean: sub-LoginAndRegister-clean sub-ManipulateFile-clean  FORCE
-distclean: sub-LoginAndRegister-distclean sub-ManipulateFile-distclean  FORCE
+make_first: sub-LoginAndRegister-make_first sub-ManipulateFile-make_first sub-logTool-make_first  FORCE
+all: sub-LoginAndRegister-all sub-ManipulateFile-all sub-logTool-all  FORCE
+clean: sub-LoginAndRegister-clean sub-ManipulateFile-clean sub-logTool-clean  FORCE
+distclean: sub-LoginAndRegister-distclean sub-ManipulateFile-distclean sub-logTool-distclean  FORCE
 	-$(DEL_FILE) Makefile
 	-$(DEL_FILE) .qmake.stash
-install_subtargets: sub-LoginAndRegister-install_subtargets sub-ManipulateFile-install_subtargets FORCE
-uninstall_subtargets: sub-LoginAndRegister-uninstall_subtargets sub-ManipulateFile-uninstall_subtargets FORCE
+install_subtargets: sub-LoginAndRegister-install_subtargets sub-ManipulateFile-install_subtargets sub-logTool-install_subtargets FORCE
+uninstall_subtargets: sub-LoginAndRegister-uninstall_subtargets sub-ManipulateFile-uninstall_subtargets sub-logTool-uninstall_subtargets FORCE
 
 sub-LoginAndRegister-check:
 	@if not exist LoginAndRegister\ mkdir LoginAndRegister\ & if not exist LoginAndRegister\ exit 1
@@ -499,7 +527,10 @@ sub-LoginAndRegister-check:
 sub-ManipulateFile-check:
 	@if not exist ManipulateFile\ mkdir ManipulateFile\ & if not exist ManipulateFile\ exit 1
 	cd ManipulateFile\ && ( if not exist Makefile $(QMAKE) -o Makefile E:\work\Myqq\MyQQ_version\MyQQ_version\ManipulateFile\ManipulateFile.pro -spec win32-g++ "CONFIG+=debug" "CONFIG+=qml_debug" ) && $(MAKE) -f Makefile check
-check: sub-LoginAndRegister-check sub-ManipulateFile-check
+sub-logTool-check:
+	@if not exist logTool\ mkdir logTool\ & if not exist logTool\ exit 1
+	cd logTool\ && ( if not exist Makefile $(QMAKE) -o Makefile E:\work\Myqq\MyQQ_version\MyQQ_version\logTool\logTool.pro -spec win32-g++ "CONFIG+=debug" "CONFIG+=qml_debug" ) && $(MAKE) -f Makefile check
+check: sub-LoginAndRegister-check sub-ManipulateFile-check sub-logTool-check
 
 sub-LoginAndRegister-benchmark:
 	@if not exist LoginAndRegister\ mkdir LoginAndRegister\ & if not exist LoginAndRegister\ exit 1
@@ -507,7 +538,10 @@ sub-LoginAndRegister-benchmark:
 sub-ManipulateFile-benchmark:
 	@if not exist ManipulateFile\ mkdir ManipulateFile\ & if not exist ManipulateFile\ exit 1
 	cd ManipulateFile\ && ( if not exist Makefile $(QMAKE) -o Makefile E:\work\Myqq\MyQQ_version\MyQQ_version\ManipulateFile\ManipulateFile.pro -spec win32-g++ "CONFIG+=debug" "CONFIG+=qml_debug" ) && $(MAKE) -f Makefile benchmark
-benchmark: sub-LoginAndRegister-benchmark sub-ManipulateFile-benchmark
+sub-logTool-benchmark:
+	@if not exist logTool\ mkdir logTool\ & if not exist logTool\ exit 1
+	cd logTool\ && ( if not exist Makefile $(QMAKE) -o Makefile E:\work\Myqq\MyQQ_version\MyQQ_version\logTool\logTool.pro -spec win32-g++ "CONFIG+=debug" "CONFIG+=qml_debug" ) && $(MAKE) -f Makefile benchmark
+benchmark: sub-LoginAndRegister-benchmark sub-ManipulateFile-benchmark sub-logTool-benchmark
 install:install_subtargets  FORCE
 
 uninstall: uninstall_subtargets FORCE
