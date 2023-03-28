@@ -11,6 +11,7 @@
 
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
+#include <QtWidgets/QCheckBox>
 #include <QtWidgets/QComboBox>
 #include <QtWidgets/QFrame>
 #include <QtWidgets/QLabel>
@@ -33,6 +34,7 @@ public:
     QLineEdit *password;
     QPushButton *login;
     QPushButton *pushButton;
+    QCheckBox *rememberPass;
 
     void setupUi(QWidget *Login)
     {
@@ -79,6 +81,9 @@ public:
         pushButton = new QPushButton(bottomframe);
         pushButton->setObjectName(QString::fromUtf8("pushButton"));
         pushButton->setGeometry(QRect(20, 150, 80, 20));
+        rememberPass = new QCheckBox(bottomframe);
+        rememberPass->setObjectName(QString::fromUtf8("rememberPass"));
+        rememberPass->setGeometry(QRect(140, 150, 73, 18));
 
         retranslateUi(Login);
         QObject::connect(close, SIGNAL(clicked()), Login, SLOT(close()));
@@ -97,6 +102,7 @@ public:
         password->setPlaceholderText(QCoreApplication::translate("Login", "\350\276\223\345\205\245\345\257\206\347\240\201", nullptr));
         login->setText(QCoreApplication::translate("Login", "\347\231\273\345\275\225", nullptr));
         pushButton->setText(QCoreApplication::translate("Login", "\346\263\250\345\206\214", nullptr));
+        rememberPass->setText(QCoreApplication::translate("Login", "\350\256\260\344\275\217\345\257\206\347\240\201", nullptr));
     } // retranslateUi
 
 };

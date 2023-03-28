@@ -163,6 +163,19 @@
      <string>注册</string>
     </property>
    </widget>
+   <widget class="QCheckBox" name="rememberPass">
+    <property name="geometry">
+     <rect>
+      <x>140</x>
+      <y>150</y>
+      <width>73</width>
+      <height>18</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>记住密码</string>
+    </property>
+   </widget>
   </widget>
  </widget>
  <resources/>
