@@ -139,7 +139,6 @@ int Login::userLogin()
 
 }
 
-
 void Login::on_login_clicked()
 {
     int res=userLogin();
@@ -183,7 +182,7 @@ void Login::on_pushButton_clicked()
 void Login::createUsernameFile()
 {
 
-//   std::printf("aaa");
+//   std::printf("aaa");a
 
    mani_file*  mani=new mani_file();
    mani->createFile("name.txt");
