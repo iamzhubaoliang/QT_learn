@@ -37,6 +37,7 @@ MOVE          = move
 SUBTARGETS    =  \
 		sub-LoginAndRegister \
 		sub-ManipulateFile \
+		sub-commonVarible \
 		sub-logTool
 
 
@@ -90,6 +91,31 @@ sub-ManipulateFile-install_subtargets: FORCE
 sub-ManipulateFile-uninstall_subtargets: FORCE
 	@if not exist ManipulateFile\ mkdir ManipulateFile\ & if not exist ManipulateFile\ exit 1
 	cd ManipulateFile\ && ( if not exist Makefile $(QMAKE) -o Makefile E:\work\Myqq\MyQQ_version\MyQQ_version\ManipulateFile\ManipulateFile.pro -spec win32-g++ "CONFIG+=debug" "CONFIG+=qml_debug" ) && $(MAKE) -f Makefile uninstall
+sub-commonVarible-qmake_all:  FORCE
+	@if not exist commonVarible\ mkdir commonVarible\ & if not exist commonVarible\ exit 1
+	cd commonVarible\ && $(QMAKE) -o Makefile E:\work\Myqq\MyQQ_version\MyQQ_version\commonVarible\commonVarible.pro -spec win32-g++ "CONFIG+=debug" "CONFIG+=qml_debug"
+	cd commonVarible\ && $(MAKE) -f Makefile qmake_all
+sub-commonVarible: FORCE
+	@if not exist commonVarible\ mkdir commonVarible\ & if not exist commonVarible\ exit 1
+	cd commonVarible\ && ( if not exist Makefile $(QMAKE) -o Makefile E:\work\Myqq\MyQQ_version\MyQQ_version\commonVarible\commonVarible.pro -spec win32-g++ "CONFIG+=debug" "CONFIG+=qml_debug" ) && $(MAKE) -f Makefile
+sub-commonVarible-make_first: FORCE
+	@if not exist commonVarible\ mkdir commonVarible\ & if not exist commonVarible\ exit 1
+	cd commonVarible\ && ( if not exist Makefile $(QMAKE) -o Makefile E:\work\Myqq\MyQQ_version\MyQQ_version\commonVarible\commonVarible.pro -spec win32-g++ "CONFIG+=debug" "CONFIG+=qml_debug" ) && $(MAKE) -f Makefile 
+sub-commonVarible-all: FORCE
+	@if not exist commonVarible\ mkdir commonVarible\ & if not exist commonVarible\ exit 1
+	cd commonVarible\ && ( if not exist Makefile $(QMAKE) -o Makefile E:\work\Myqq\MyQQ_version\MyQQ_version\commonVarible\commonVarible.pro -spec win32-g++ "CONFIG+=debug" "CONFIG+=qml_debug" ) && $(MAKE) -f Makefile all
+sub-commonVarible-clean: FORCE
+	@if not exist commonVarible\ mkdir commonVarible\ & if not exist commonVarible\ exit 1
+	cd commonVarible\ && ( if not exist Makefile $(QMAKE) -o Makefile E:\work\Myqq\MyQQ_version\MyQQ_version\commonVarible\commonVarible.pro -spec win32-g++ "CONFIG+=debug" "CONFIG+=qml_debug" ) && $(MAKE) -f Makefile clean
+sub-commonVarible-distclean: FORCE
+	@if not exist commonVarible\ mkdir commonVarible\ & if not exist commonVarible\ exit 1
+	cd commonVarible\ && ( if not exist Makefile $(QMAKE) -o Makefile E:\work\Myqq\MyQQ_version\MyQQ_version\commonVarible\commonVarible.pro -spec win32-g++ "CONFIG+=debug" "CONFIG+=qml_debug" ) && $(MAKE) -f Makefile distclean
+sub-commonVarible-install_subtargets: FORCE
+	@if not exist commonVarible\ mkdir commonVarible\ & if not exist commonVarible\ exit 1
+	cd commonVarible\ && ( if not exist Makefile $(QMAKE) -o Makefile E:\work\Myqq\MyQQ_version\MyQQ_version\commonVarible\commonVarible.pro -spec win32-g++ "CONFIG+=debug" "CONFIG+=qml_debug" ) && $(MAKE) -f Makefile install
+sub-commonVarible-uninstall_subtargets: FORCE
+	@if not exist commonVarible\ mkdir commonVarible\ & if not exist commonVarible\ exit 1
+	cd commonVarible\ && ( if not exist Makefile $(QMAKE) -o Makefile E:\work\Myqq\MyQQ_version\MyQQ_version\commonVarible\commonVarible.pro -spec win32-g++ "CONFIG+=debug" "CONFIG+=qml_debug" ) && $(MAKE) -f Makefile uninstall
 sub-logTool-qmake_all:  FORCE
 	@if not exist logTool\ mkdir logTool\ & if not exist logTool\ exit 1
 	cd logTool\ && $(QMAKE) -o Makefile E:\work\Myqq\MyQQ_version\MyQQ_version\logTool\logTool.pro -spec win32-g++ "CONFIG+=debug" "CONFIG+=qml_debug"
@@ -510,16 +536,16 @@ D:/solft/qt/5.14.0/mingw73_64/mkspecs/features/lex.prf:
 qmake: FORCE
 	@$(QMAKE) -o Makefile ..\MyQQ_version\MyQQ_version.pro -spec win32-g++ "CONFIG+=debug" "CONFIG+=qml_debug"
 
-qmake_all: sub-LoginAndRegister-qmake_all sub-ManipulateFile-qmake_all sub-logTool-qmake_all FORCE
+qmake_all: sub-LoginAndRegister-qmake_all sub-ManipulateFile-qmake_all sub-commonVarible-qmake_all sub-logTool-qmake_all FORCE
 
-make_first: sub-LoginAndRegister-make_first sub-ManipulateFile-make_first sub-logTool-make_first  FORCE
-all: sub-LoginAndRegister-all sub-ManipulateFile-all sub-logTool-all  FORCE
-clean: sub-LoginAndRegister-clean sub-ManipulateFile-clean sub-logTool-clean  FORCE
-distclean: sub-LoginAndRegister-distclean sub-ManipulateFile-distclean sub-logTool-distclean  FORCE
+make_first: sub-LoginAndRegister-make_first sub-ManipulateFile-make_first sub-commonVarible-make_first sub-logTool-make_first  FORCE
+all: sub-LoginAndRegister-all sub-ManipulateFile-all sub-commonVarible-all sub-logTool-all  FORCE
+clean: sub-LoginAndRegister-clean sub-ManipulateFile-clean sub-commonVarible-clean sub-logTool-clean  FORCE
+distclean: sub-LoginAndRegister-distclean sub-ManipulateFile-distclean sub-commonVarible-distclean sub-logTool-distclean  FORCE
 	-$(DEL_FILE) Makefile
 	-$(DEL_FILE) .qmake.stash
-install_subtargets: sub-LoginAndRegister-install_subtargets sub-ManipulateFile-install_subtargets sub-logTool-install_subtargets FORCE
-uninstall_subtargets: sub-LoginAndRegister-uninstall_subtargets sub-ManipulateFile-uninstall_subtargets sub-logTool-uninstall_subtargets FORCE
+install_subtargets: sub-LoginAndRegister-install_subtargets sub-ManipulateFile-install_subtargets sub-commonVarible-install_subtargets sub-logTool-install_subtargets FORCE
+uninstall_subtargets: sub-LoginAndRegister-uninstall_subtargets sub-ManipulateFile-uninstall_subtargets sub-commonVarible-uninstall_subtargets sub-logTool-uninstall_subtargets FORCE
 
 sub-LoginAndRegister-check:
 	@if not exist LoginAndRegister\ mkdir LoginAndRegister\ & if not exist LoginAndRegister\ exit 1
@@ -527,10 +553,13 @@ sub-LoginAndRegister-check:
 sub-ManipulateFile-check:
 	@if not exist ManipulateFile\ mkdir ManipulateFile\ & if not exist ManipulateFile\ exit 1
 	cd ManipulateFile\ && ( if not exist Makefile $(QMAKE) -o Makefile E:\work\Myqq\MyQQ_version\MyQQ_version\ManipulateFile\ManipulateFile.pro -spec win32-g++ "CONFIG+=debug" "CONFIG+=qml_debug" ) && $(MAKE) -f Makefile check
+sub-commonVarible-check:
+	@if not exist commonVarible\ mkdir commonVarible\ & if not exist commonVarible\ exit 1
+	cd commonVarible\ && ( if not exist Makefile $(QMAKE) -o Makefile E:\work\Myqq\MyQQ_version\MyQQ_version\commonVarible\commonVarible.pro -spec win32-g++ "CONFIG+=debug" "CONFIG+=qml_debug" ) && $(MAKE) -f Makefile check
 sub-logTool-check:
 	@if not exist logTool\ mkdir logTool\ & if not exist logTool\ exit 1
 	cd logTool\ && ( if not exist Makefile $(QMAKE) -o Makefile E:\work\Myqq\MyQQ_version\MyQQ_version\logTool\logTool.pro -spec win32-g++ "CONFIG+=debug" "CONFIG+=qml_debug" ) && $(MAKE) -f Makefile check
-check: sub-LoginAndRegister-check sub-ManipulateFile-check sub-logTool-check
+check: sub-LoginAndRegister-check sub-ManipulateFile-check sub-commonVarible-check sub-logTool-check
 
 sub-LoginAndRegister-benchmark:
 	@if not exist LoginAndRegister\ mkdir LoginAndRegister\ & if not exist LoginAndRegister\ exit 1
@@ -538,10 +567,13 @@ sub-LoginAndRegister-benchmark:
 sub-ManipulateFile-benchmark:
 	@if not exist ManipulateFile\ mkdir ManipulateFile\ & if not exist ManipulateFile\ exit 1
 	cd ManipulateFile\ && ( if not exist Makefile $(QMAKE) -o Makefile E:\work\Myqq\MyQQ_version\MyQQ_version\ManipulateFile\ManipulateFile.pro -spec win32-g++ "CONFIG+=debug" "CONFIG+=qml_debug" ) && $(MAKE) -f Makefile benchmark
+sub-commonVarible-benchmark:
+	@if not exist commonVarible\ mkdir commonVarible\ & if not exist commonVarible\ exit 1
+	cd commonVarible\ && ( if not exist Makefile $(QMAKE) -o Makefile E:\work\Myqq\MyQQ_version\MyQQ_version\commonVarible\commonVarible.pro -spec win32-g++ "CONFIG+=debug" "CONFIG+=qml_debug" ) && $(MAKE) -f Makefile benchmark
 sub-logTool-benchmark:
 	@if not exist logTool\ mkdir logTool\ & if not exist logTool\ exit 1
 	cd logTool\ && ( if not exist Makefile $(QMAKE) -o Makefile E:\work\Myqq\MyQQ_version\MyQQ_version\logTool\logTool.pro -spec win32-g++ "CONFIG+=debug" "CONFIG+=qml_debug" ) && $(MAKE) -f Makefile benchmark
-benchmark: sub-LoginAndRegister-benchmark sub-ManipulateFile-benchmark sub-logTool-benchmark
+benchmark: sub-LoginAndRegister-benchmark sub-ManipulateFile-benchmark sub-commonVarible-benchmark sub-logTool-benchmark
 install:install_subtargets  FORCE
 
 uninstall: uninstall_subtargets FORCE

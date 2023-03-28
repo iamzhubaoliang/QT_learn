@@ -5,9 +5,10 @@
 #include <cstring>
 #include "manifileexception.h"
 #include "spdlog/spdlog.h"
+#include "commonvarible.h"
 mani_file::mani_file()
 {
-
+    spdlog::set_level(CommonVarible::logFlag);
 }
 
 mani_file::~mani_file(){}

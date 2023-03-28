@@ -19,3 +19,10 @@ else:unix: LIBS += -L$$OUT_PWD/../logTool/ -llogTool
 
 INCLUDEPATH += $$PWD/../logTool
 DEPENDPATH += $$PWD/../logTool
+
+win32:CONFIG(release, debug|release): LIBS += -L$$OUT_PWD/../commonVarible/ -lcommonVarible
+else:win32:CONFIG(debug, debug|release): LIBS += -L$$OUT_PWD/../commonVarible/ -lcommonVarible
+else:unix: LIBS += -L$$OUT_PWD/../commonVarible/ -lcommonVarible
+
+INCLUDEPATH += $$PWD/../commonVarible
+DEPENDPATH += $$PWD/../commonVarible

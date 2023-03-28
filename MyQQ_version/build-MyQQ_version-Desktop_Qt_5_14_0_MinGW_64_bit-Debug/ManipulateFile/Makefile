@@ -17,10 +17,10 @@ CXX           = g++
 DEFINES       = -DUNICODE -D_UNICODE -DWIN32 -DMINGW_HAS_SECURE_API=1 -DManipulateFile_LIBRARY -DQT_QML_DEBUG -DQT_GUI_LIB -DQT_CORE_LIB
 CFLAGS        = -fno-keep-inline-dllexport -g -Wall -Wextra -Wextra $(DEFINES)
 CXXFLAGS      = -fno-keep-inline-dllexport -g -std=gnu++11 -Wall -Wextra -Wextra -fexceptions -mthreads $(DEFINES)
-INCPATH       = -I..\..\MyQQ_version\ManipulateFile -I. -I..\..\MyQQ_version\logTool -ID:\solft\qt\5.14.0\mingw73_64\include -ID:\solft\qt\5.14.0\mingw73_64\include\QtGui -ID:\solft\qt\5.14.0\mingw73_64\include\QtANGLE -ID:\solft\qt\5.14.0\mingw73_64\include\QtCore -I. -I/include -ID:\solft\qt\5.14.0\mingw73_64\mkspecs\win32-g++ 
+INCPATH       = -I..\..\MyQQ_version\ManipulateFile -I. -I..\..\MyQQ_version\logTool -I..\..\MyQQ_version\commonVarible -ID:\solft\qt\5.14.0\mingw73_64\include -ID:\solft\qt\5.14.0\mingw73_64\include\QtGui -ID:\solft\qt\5.14.0\mingw73_64\include\QtANGLE -ID:\solft\qt\5.14.0\mingw73_64\include\QtCore -I. -I/include -ID:\solft\qt\5.14.0\mingw73_64\mkspecs\win32-g++ 
 LINKER      =        g++
 LFLAGS        =        -shared -Wl,-subsystem,windows -mthreads -Wl,--out-implib,libManipulateFile.a
-LIBS        =        -LE:\work\Myqq\MyQQ_version\build-MyQQ_version-Desktop_Qt_5_14_0_MinGW_64_bit-Debug\logTool -llogTool D:\solft\qt\5.14.0\mingw73_64\lib\libQt5Gui.a D:\solft\qt\5.14.0\mingw73_64\lib\libQt5Core.a   
+LIBS        =        -LE:\work\Myqq\MyQQ_version\build-MyQQ_version-Desktop_Qt_5_14_0_MinGW_64_bit-Debug\logTool -llogTool -LE:\work\Myqq\MyQQ_version\build-MyQQ_version-Desktop_Qt_5_14_0_MinGW_64_bit-Debug\commonVarible -lcommonVarible D:\solft\qt\5.14.0\mingw73_64\lib\libQt5Gui.a D:\solft\qt\5.14.0\mingw73_64\lib\libQt5Core.a   
 QMAKE         = D:\solft\qt\5.14.0\mingw73_64\bin\qmake.exe
 DEL_FILE      = del
 CHK_DIR_EXISTS= if not exist
@@ -572,7 +572,9 @@ mani_file.o: ../../MyQQ_version/ManipulateFile/mani_file.cpp ../../MyQQ_version/
 		../../MyQQ_version/logTool/spdlog/sinks/ansicolor_sink-inl.h \
 		../../MyQQ_version/logTool/spdlog/version.h \
 		../../MyQQ_version/logTool/spdlog/details/synchronous_factory.h \
-		../../MyQQ_version/logTool/spdlog/spdlog-inl.h
+		../../MyQQ_version/logTool/spdlog/spdlog-inl.h \
+		../../MyQQ_version/commonVarible/commonvarible.h \
+		../../MyQQ_version/commonVarible/commonVarible_global.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o mani_file.o ..\..\MyQQ_version\ManipulateFile\mani_file.cpp
 
 manifileexceptioin.o: ../../MyQQ_version/ManipulateFile/manifileexceptioin.cpp ../../MyQQ_version/ManipulateFile/manifileexception.h
